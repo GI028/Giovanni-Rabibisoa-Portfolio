@@ -1,0 +1,8 @@
+{
+    "Welcome to React": "Bienvenue chez React et react-i18next",
+    "userNumber_zero": "Aucun Utilisateur {{gio}}",  
+    "userNumber_one": "Nombre d'utilisateur: {{count}}",  
+    "userNumber": "Nombre d'utilisateurs: {{count}}",   
+    "welcomeUser": "Bienvenue <1>utilisateur</1>! <3>par default</3>",
+    "keyUnescaped": "Dangeureux {{-gio}}"
+}
