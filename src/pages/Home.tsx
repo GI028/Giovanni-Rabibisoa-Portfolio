@@ -1,5 +1,4 @@
 import {
-    FaDotCircle,
   FaFacebookSquare,
   FaGithubSquare,
   FaInstagram,
