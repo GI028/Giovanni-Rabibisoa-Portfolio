@@ -1,5 +1,6 @@
 import NavBar from "./components/Navigation/NavBar"
 import Educations from "./pages/Educations"
+import Hobbies from "./pages/Hobbies"
 import Home from "./pages/Home"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <main className={containerClass+' mt-10'}>
         <Home />
         <Educations />
+        <Hobbies />
       </main>
     </>
   )

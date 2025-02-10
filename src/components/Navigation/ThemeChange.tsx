@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { theme, ThemeElement } from "../../utils/Theme"
-import Dropdown from "../Dropdown"
+import Dropdown from "../Dropdown/Dropdown"
 import { cn } from "../../utils/helpers"
 import { FaCheck } from "react-icons/fa6"
 export default function ThemeChange() {

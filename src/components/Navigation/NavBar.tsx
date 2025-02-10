@@ -2,6 +2,7 @@ import  { useState } from "react"
 import { IoMenu } from "react-icons/io5"
 import ThemeChange from "./ThemeChange"
 import { cn } from "../../utils/helpers"
+import LangChange from "./LangChange"
 
 type Props = {
   className?:string
@@ -10,7 +11,7 @@ type Props = {
 export default function NavBar({className}:Props) {
   const [selected, setSelected] = useState(0)
   const [visible, setVisible] = useState(false)
-  const navItems = ["About", "Educations", "Skills", "Projects", "Contact"]
+  const navItems = ["About", /*"Educations",*/ "Skills", "Projects", "Contact"]
 
   const toggleNavbar = () => {
     setVisible((prev) => !prev)
@@ -47,7 +48,8 @@ export default function NavBar({className}:Props) {
             </li>
           ))}
         </ul>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
+          <LangChange />
           <ThemeChange />
           <button
             onClick={toggleNavbar}

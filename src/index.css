@@ -1,72 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 @import "tailwindcss";
 /* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root,.light{
-    --primary: var(--color-purple-400);
-    --bg: var(--color-slate-100);
-    --bg-2: var(--color-purple-50);
-    --bg-3: var(--color-purple-100);
-    --text: var(--color-gray-800);
-    --text-2: var(--color-gray-500);
-    --text-3: var(--color-gray-400);
+:root,
+.light {
+  --primary: var(--color-purple-400);
+  --bg: var(--color-slate-100);
+  --bg-2: var(--color-purple-50);
+  --bg-3: var(--color-purple-100);
+  --text: var(--color-gray-800);
+  --text-2: var(--color-gray-500);
+  --text-3: var(--color-gray-400);
+  --text-4: var(--color-gray-300);
 }
-.dark{
-    --primary: var(--color-purple-500);
-    --bg: var(--color-slate-900);
-    --bg-2: var(--color-slate-800);
-    --bg-3: var(--color-slate-700);
-    --text: var(--color-gray-200);
-    --text-2: var(--color-gray-400);
-    --text-3: var(--color-gray-500);
+.dark {
+  --primary: var(--color-purple-500);
+  --bg: var(--color-slate-900);
+  --bg-2: var(--color-slate-800);
+  --bg-3: var(--color-slate-700);
+  --text: var(--color-gray-200);
+  --text-2: var(--color-gray-400);
+  --text-3: var(--color-gray-500);
+  --text-4: var(--color-gray-700);
 }
 
 @theme {
-    --breakpoint-xs: 30rem;
-    --color-bg-light: var(--color-white);
-    --color-primary: var(--primary);
-    --color-bg: var(--bg);
-    --color-bg-2: var(--bg-2);
-    --color-bg-3: var(--bg-3);
-    --color-text: var(--text);
-    --color-text-2: var(--text-2);
-    --color-text-3: var(--text-3);
+  --breakpoint-xs: 30rem;
+  --color-bg-light: var(--color-white);
+  --color-primary: var(--primary);
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-text-4: var(--text-4);
 
-    --font-roboto: "Roboto", serif;
-    --font-montserrat: "Montserrat", serif;
-    --font-quicksand: "Quicksand", serif;
-    --font-titillium-web: "Titillium Web", serif;
-
-}
-*{
-    transition-property: background;
-    transition-duration: 200ms;
+  --font-roboto: "Roboto", serif;
+  --font-montserrat: "Montserrat", serif;
+  --font-quicksand: "Quicksand", serif;
+  --font-titillium-web: "Titillium Web", serif;
 }
 
-body{
-    background-color: var(--color-bg);
-    color: var(--color-text-3);
-    font-family:  var(--font-titillium-web);
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-3);
+  font-family: var(--font-titillium-web);
+    @apply transition-colors duration-200;
 }
-html{
-    scroll-snap-type: y proximity;
-    /* scroll-padding-top: 30px; */
-}
-
-.stack{
-    position: absolute;
-    top:50%;
-    left:50%;
-    translate: -50% -50%;    
-}
-.glow{
-    filter: drop-shadow(0 0 10px var(--color-primary)) drop-shadow(0 0 15px var(--color-primary));
+html {
+  scroll-snap-type: y proximity;
+  /* scroll-padding-top: 30px; */
 }
 
-
+.stack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.glow {
+  filter: drop-shadow(0 0 10px var(--color-primary))
+    drop-shadow(0 0 15px var(--color-primary));
+}

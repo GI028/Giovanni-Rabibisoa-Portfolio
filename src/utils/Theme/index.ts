@@ -1,6 +1,7 @@
 import { IconType } from "react-icons"
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
-import { TbSunMoon } from "react-icons/tb"
+import { MdLightMode } from "react-icons/md"
+import { RiMoonClearFill } from "react-icons/ri"
+import { WiMoonAltThirdQuarter } from "react-icons/wi"
 
 type ThemeName = "light" | "dark" | "auto"
 
@@ -45,9 +46,9 @@ export class ThemeElement {
   }
 }
 
-const system = new ThemeElement("auto", TbSunMoon)
-const darkMode = new ThemeElement("dark", MdOutlineDarkMode)
-const lightMode = new ThemeElement("light", MdOutlineLightMode)
+const system = new ThemeElement("auto", WiMoonAltThirdQuarter )
+const darkMode = new ThemeElement("dark", RiMoonClearFill )
+const lightMode = new ThemeElement("light", MdLightMode )
 
 system.isActifFunction = function (): boolean {
   return !("theme" in localStorage) || localStorage.theme === this.name

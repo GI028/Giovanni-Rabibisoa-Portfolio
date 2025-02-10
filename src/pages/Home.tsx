@@ -10,7 +10,7 @@ import { IoTriangle } from "react-icons/io5"
 
 export default function Home() {
   return (
-    <section className="flex snap-start scroll-mt-16 flex-col-reverse sm:flex-row space-x-5 justify-items-stretch items-center min-h-lvh">
+    <section className="flex mt-16 py-16 flex-col-reverse sm:flex-row space-x-5 justify-items-stretch items-center border-b-2 border-bg-2">
       <div className="flex-3 space-y-6">
         <h3 className="text-xl font-bold text-text-2">Hello it's me</h3>
         <h1 className="text-4xl font-bold text-text">Giovanni Rabibisoa</h1>
@@ -47,7 +47,7 @@ export default function Home() {
         </ul>
         <Button>Download CV</Button>
       </div>
-      <div className="flex-1 md:flex-2 lg:flex-3 my-10">
+      <div className="flex-1 md:flex-2 lg:flex-3 mb-16">
         <div className="size-fit mx-auto rounded-full relative">
           <IoTriangle  size={250} className="stack glow text-primary rotate-190" />
           <IoTriangle  size={250} className="stack glow text-primary rotate-170" />
