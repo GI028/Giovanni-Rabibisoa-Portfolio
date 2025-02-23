@@ -1,6 +1,8 @@
 import Dropdown from "../Dropdown/Dropdown"
 import { cn } from "../../utils/helpers"
 import { LuLanguages } from "react-icons/lu"
+import { FaCheck } from "react-icons/fa6"
+import logo from "../../assets/logo"
 
 export default function LangChange() {
   const iconSize = 20
@@ -14,27 +16,48 @@ export default function LangChange() {
         </button>
       }
     >
-        <button
-          className={cn("inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",false && "bg-bg-2")}
-          role="menuitem"
-          onClick={() => {}}
-        >
-          fr
-        </button>
-        <button
-          className={cn("inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",true && "bg-bg-2")}
-          role="menuitem"
-          onClick={() => {}}
-        >
-          en
-        </button>
-        <button
-          className={cn("inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",false && "bg-bg-2")}
-          role="menuitem"
-          onClick={() => {}}
-        >
-          mg
-        </button>
+      <button
+        className={cn(
+          "inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",
+          false && "bg-bg-2"
+        )}
+        role="menuitem"
+        onClick={() => {}}
+      >
+        <div className="w-5">
+          <img src={logo.frenchFlag} className="w-5" alt="" />
+        </div>
+        <span>fr</span>
+      </button>
+      <button
+        className={cn(
+          "inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",
+          true && "bg-bg-2"
+        )}
+        role="menuitem"
+        onClick={() => {}}
+      >
+        <div className="w-5">
+          <img src={logo.englishFlag} className="w-5" alt="" />
+        </div>
+        <span>en</span>
+        <div >
+          <FaCheck />
+        </div>
+      </button>
+      <button
+        className={cn(
+          "inline-flex items-center gap-2 w-full  px-4 py-2 text-sm text-text hover:bg-bg-3 cursor-pointer",
+          false && "bg-bg-2"
+        )}
+        role="menuitem"
+        onClick={() => {}}
+      >
+        <div className="w-5">
+          <img src={logo.madagascarFlag} className="w-5" alt="" />
+        </div>
+        <span>mg</span>
+      </button>
     </Dropdown>
   )
 }

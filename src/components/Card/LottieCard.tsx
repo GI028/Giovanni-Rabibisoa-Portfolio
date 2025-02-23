@@ -1,6 +1,6 @@
 import Lottie from "lottie-react"
 import React from "react"
-import { cn } from "../../utils/helpers"
+import Card from "."
 
 type Props = {
   children: React.ReactNode
@@ -13,14 +13,23 @@ export default function LottieCard({
   animation,
   children,
   animationClassName,
-  contentClassName
+  contentClassName,
 }: Props) {
   return (
-    <div className="bg-bg-2 rounded p-2 shadow-md">
-      <div className={cn('aspect-square',animationClassName)}>
-        <Lottie animationData={animation} />
-      </div>
-      <div className={contentClassName}>{children}</div>
-    </div>
+    <Card
+      head={<Lottie animationData={animation} />}
+      headClassName={animationClassName}
+      contentClassName={contentClassName}
+    >
+      {children}
+    </Card>
   )
+  // return (
+  //   <div className="bg-bg-2 rounded p-2 shadow-md">
+  //     <div className={cn('aspect-square',animationClassName)}>
+  //       <Lottie animationData={animation} />
+  //     </div>
+  //     <div className={contentClassName}>{children}</div>
+  //   </div>
+  // )
 }

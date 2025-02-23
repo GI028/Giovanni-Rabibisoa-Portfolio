@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560.34 1531.57">
+  <defs>
+    <style>
+      .b {
+        fill: #fff;
+      }
+
+      .b, .c, .d {
+        stroke-width: 0px;
+      }
+
+      .c {
+        fill: #ce1126;
+      }
+
+      .d {
+        fill: #002654;
+      }
+    </style>
+  </defs>
+  <rect class="d" width="882.38" height="1531.57"/>
+  <rect class="b" x="852.77" width="895.66" height="1531.57"/>
+  <rect class="c" x="1706.55" width="853.79" height="1531.57"/>
+</svg>

@@ -4,4 +4,44 @@ function concatClassNames(...args: Cn[]): string {
   return args.filter((item) => !!item).join(" ")
 }
 
-export { concatClassNames as cn}
+function loadAssets(
+  modules: Record<string, { default: string }>
+): Record<string, string> {
+  const result: Record<string, string> = {}
+
+  for (const path in modules) {
+    const filename = path.split("/").pop() || ""
+    const name = filename.split(".")[0]
+
+    result[name as string] = modules[path].default
+  }
+
+  return result
+}
+
+function loadAssetsWithKeys(
+  keys: string[],
+  modules: Record<string, { default: string }>
+): Record<string, string> {
+  const result : Record<string, string> = Object.fromEntries(
+    keys.map((key) => [key, ""])
+  ) as Record<string, string>;
+
+  for (const path in modules) {
+    const filename = path.split("/").pop() || ""
+    const name = filename.split(".")[0]
+
+    if (name in result) {
+      result[name as string] = modules[path].default
+    }
+  }
+
+  // Warn if a key is missing an image
+  Object.entries(result).forEach(([key, value]) => {
+    if (value.length === 0) console.warn(`⚠️ Missing image for: ${key}`)
+  })
+
+  return result
+}
+
+export { concatClassNames as cn, loadAssets, loadAssetsWithKeys}

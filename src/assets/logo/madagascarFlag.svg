@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2297.36 1531.57">
+  <defs>
+    <style>
+      .b {
+        fill: #00843d;
+      }
+
+      .b, .c, .d {
+        stroke-width: 0px;
+      }
+
+      .c {
+        fill: #fff;
+      }
+
+      .d {
+        fill: #f9423a;
+      }
+    </style>
+  </defs>
+  <polygon class="c" points="0 0 0 765.79 0 1531.57 765.79 1531.57 765.79 765.79 765.79 0 0 0"/>
+  <polygon class="d" points="1531.57 0 765.79 0 765.79 765.79 1531.57 765.79 2297.36 765.79 2297.36 0 1531.57 0"/>
+  <polygon class="b" points="1531.57 765.79 765.79 765.79 765.79 1531.57 1531.57 1531.57 2297.36 1531.57 2297.36 765.79 1531.57 765.79"/>
+</svg>

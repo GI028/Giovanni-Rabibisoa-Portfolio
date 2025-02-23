@@ -4,13 +4,14 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa"
-import Button from "../components/FormComponents/Button"
-import Profile from "../assets/avatar.png"
-import { IoTriangle } from "react-icons/io5"
+import Button from "../../components/FormComponents/Button"
+import Profile from "../../assets/myPhotos/myProfile.png"
+import FullHeight from "../../components/HTML/FullHeight"
+// import { IoTriangle } from "react-icons/io5"
 
 export default function Home() {
   return (
-    <section className="flex mt-16 py-16 flex-col-reverse sm:flex-row space-x-5 justify-items-stretch items-center border-b-2 border-bg-2">
+    <FullHeight skipNavbar className="flex flex-col-reverse sm:flex-row space-x-5 justify-items-stretch items-center border-b-2 border-bg-2">
       <div className="flex-3 space-y-6">
         <h3 className="text-xl font-bold text-text-2">Hello it's me</h3>
         <h1 className="text-4xl font-bold text-text">Giovanni Rabibisoa</h1>
@@ -47,18 +48,18 @@ export default function Home() {
         </ul>
         <Button>Download CV</Button>
       </div>
-      <div className="flex-1 md:flex-2 lg:flex-3 mb-16">
+      <div className="flex-1 md:flex-2 lg:flex-3 my-10 md:my-0">
         <div className="size-fit mx-auto rounded-full relative">
-          <IoTriangle  size={250} className="stack glow text-primary rotate-190" />
-          <IoTriangle  size={250} className="stack glow text-primary rotate-170" />
+          {/* <IoTriangle  size={250} className="stack glow text-primary rotate-190" />
+          <IoTriangle  size={250} className="stack glow text-primary rotate-170" /> */}
           {/* <FaDotCircle size={250} className="stack glow text-primary rotate-170" /> */}
-          <div className="size-75">
-            <div className="size-full rounded-full overflow-hidden stack">
-              <img src={Profile} alt="" className="h-full" />
+          <div className="size-100">
+            <div className="size-full stack flex justify-center">
+              <img src={Profile} alt="" className="h-full bg-primary rounded-full " />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </FullHeight>
   )
 }

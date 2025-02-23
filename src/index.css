@@ -51,7 +51,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-3);
   font-family: var(--font-titillium-web);
-    @apply transition-colors duration-200;
+  @apply transition-colors duration-200;
 }
 html {
   scroll-snap-type: y proximity;
@@ -67,4 +67,9 @@ html {
 .glow {
   filter: drop-shadow(0 0 10px var(--color-primary))
     drop-shadow(0 0 15px var(--color-primary));
+}
+
+* {
+  /* scrollbar-color: var(--color-gra) blue; */
+  scrollbar-width: thin;
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2558.64 1283.4">
+  <defs>
+    <style>
+      .b {
+        fill: #006;
+      }
+
+      .b, .c, .d, .e {
+        stroke-width: 0px;
+      }
+
+      .c {
+        fill: #fff;
+      }
+
+      .d {
+        fill: #c00;
+      }
+
+      .e {
+        fill: #fc0;
+      }
+    </style>
+  </defs>
+  <rect class="c" width="2558.64" height="1283.4"/>
+  <g>
+    <rect class="d" y="1099.91" width="2558.64" height="92.6"/>
+    <rect class="d" y="916.6" width="2558.64" height="92.6"/>
+    <rect class="d" y="733.28" width="2558.64" height="92.6"/>
+    <rect class="d" y="549.96" width="2558.64" height="92.6"/>
+    <rect class="d" y="366.64" width="2558.64" height="92.6"/>
+    <rect class="d" y="183.32" width="2558.64" height="92.6"/>
+    <rect class="d" width="2558.64" height="92.6"/>
+  </g>
+  <rect class="b" width="1280" height="733.28"/>
+  <circle class="e" cx="525.77" cy="368.49" r="273.98"/>
+  <circle class="b" cx="585.96" cy="368.49" r="243.55"/>
+  <g>
+    <polygon class="e" points="898.9 162.59 770.07 354.2 829.42 382.78 898.9 162.59"/>
+    <polygon class="e" points="978.42 226 779.21 342.74 820.28 394.24 978.42 226"/>
+    <polygon class="e" points="1022.55 317.64 792.42 336.38 807.07 400.6 1022.55 317.64"/>
+    <polygon class="e" points="1022.55 419.34 807.07 336.38 792.42 400.6 1022.55 419.34"/>
+    <polygon class="e" points="978.42 510.98 820.28 342.74 779.21 394.24 978.42 510.98"/>
+    <polygon class="e" points="898.9 574.39 829.42 354.2 770.07 382.78 898.9 574.39"/>
+    <polygon class="e" points="799.74 597.02 832.68 368.49 766.81 368.49 799.74 597.02"/>
+    <polygon class="e" points="700.59 574.39 829.42 382.78 770.07 354.2 700.59 574.39"/>
+    <polygon class="e" points="621.07 510.98 820.28 394.24 779.21 342.74 621.07 510.98"/>
+    <polygon class="e" points="576.94 419.34 807.07 400.6 792.42 336.38 576.94 419.34"/>
+    <polygon class="e" points="576.94 317.64 792.42 400.6 807.07 336.38 576.94 317.64"/>
+    <polygon class="e" points="621.07 226 779.21 394.24 820.28 342.74 621.07 226"/>
+    <polygon class="e" points="700.59 162.59 770.07 382.78 829.42 354.2 700.59 162.59"/>
+    <polygon class="e" points="799.74 139.96 766.81 368.49 832.68 368.49 799.74 139.96"/>
+  </g>
+</svg>
