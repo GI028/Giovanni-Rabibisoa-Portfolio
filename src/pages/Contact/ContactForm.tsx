@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <div className="flex-1 pr-4">
+    <div className="w-full pr-0 md:pr-4">
       <div className="space-y-4 max-w-150 py-10 px-4 m-auto bg-bg-2/30 rounded backdrop-blur-xs">
         <h2 className="text-2xl text-text mb-10">Contact Me</h2>
         <div>
@@ -24,7 +24,7 @@ export default function ContactForm() {
           ></textarea>
         </div>
         <div>
-          <button className="border-1 px-6 py-3 bg-bg hover:bg-bg-2 transition-all duration-200 cursor-pointer text-lg rounded-full">Contact</button>
+          <button className="border-1 px-6 py-3 bg-bg hover:bg-bg-2 transition-all duration-200 cursor-pointer text-text rounded-full">Contact</button>
         </div>
       </div>
     </div>
