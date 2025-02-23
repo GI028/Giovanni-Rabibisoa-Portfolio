@@ -1,4 +1,3 @@
-import React from "react"
 import contacts from "./Contacts"
 import { cn } from "../../utils/helpers"
 

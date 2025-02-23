@@ -1,4 +1,3 @@
-import { GiDiploma } from "react-icons/gi"
 import ExperienceTimeline from "../components/Timeline/ExperienceTimeline"
 import Container from "../components/HTML/Container"
 import FullHeight from "../components/HTML/FullHeight"
