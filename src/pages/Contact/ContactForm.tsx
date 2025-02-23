@@ -24,7 +24,7 @@ export default function ContactForm() {
           ></textarea>
         </div>
         <div>
-          <button className="border-1 px-6 py-3 bg-bg hover:bg-bg-2 transition-all duration-200 cursor-pointer text-text rounded-full">Contact</button>
+          <button className="border-1 px-12 py-3 bg-bg hover:bg-bg-2 transition-all duration-200 cursor-pointer text-text rounded-full">Contact</button>
         </div>
       </div>
     </div>

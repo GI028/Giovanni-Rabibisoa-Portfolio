@@ -4,7 +4,7 @@ import Coding from "../../assets/animations/Coding.json"
 import Music from "../../assets/animations/MusicPlay.json"
 import Read from "../../assets/animations/ReadBooks.json"
 import Sport from "../../assets/animations/Sport.json"
-import Container from "../../components/HTML/Container"
+import Button from "../../components/FormComponents/Button"
 
 type Hobbie = {
   name: string
@@ -40,13 +40,11 @@ const datas: Hobbie[] = [
 
 export default function Hobbies() {
   return (
-    <section className="pb-16">
-      <Container>
-        <h1 className="text-3xl font-bold text-text mb-16 flex items-center space-x-2">
-          <MdInterests />
-          <span>Hobbies and Interests</span>
-        </h1>
-      </Container>
+    <div className=" py-16">
+      <h1 className="text-3xl font-bold text-text mb-16 flex items-center space-x-2">
+        <MdInterests />
+        <span>Hobbies and Interests</span>
+      </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {datas.map((hobby, index) => (
           <LottieCard
@@ -59,6 +57,9 @@ export default function Hobbies() {
           </LottieCard>
         ))}
       </div>
-    </section>
+      <div className="mt-16">
+        <Button className="m-auto">Show More</Button>
+      </div>
+    </div>
   )
 }

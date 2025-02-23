@@ -9,7 +9,7 @@ import Profile from "../../assets/myPhotos/myProfile.png"
 import FullHeight from "../../components/HTML/FullHeight"
 // import { IoTriangle } from "react-icons/io5"
 
-export default function Home() {
+export default function OverView() {
   return (
     <FullHeight skipNavbar className="flex flex-col-reverse sm:flex-row space-x-5 justify-items-stretch items-center border-b-2 border-bg-2">
       <div className="flex-3 space-y-6">
