@@ -5,7 +5,7 @@ import Container from "../components/HTML/Container"
 export default function About() {
   return (
     <>
-    <Container className="">
+    <Container>
       <OverView />
       <Hobbies />
     </Container>

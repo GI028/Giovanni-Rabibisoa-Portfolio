@@ -1,22 +1,24 @@
 import React from "react"
-import { cn } from "../../utils/helpers"
 
 type Props = {
   head: React.ReactNode
   headClassName?: string
   children: React.ReactNode
   contentClassName?: string
+  className?: string
 }
 
 export default function Card({
   head,
-  headClassName,
+  headClassName="",
   children,
-  contentClassName,
+  contentClassName="",
+  className = "",
+ 
 }: Props) {
   return (
-    <div className="bg-bg-2 rounded p-2 shadow-md">
-      <div className={cn("aspect-square flex items-center", headClassName)}>{head}</div>
+    <div className={"bg-bg-2 rounded p-2 shadow-md "+className}>
+      <div className={"aspect-square flex items-center "+headClassName}>{head}</div>
       <div className={contentClassName}>{children}</div>
     </div>
   )

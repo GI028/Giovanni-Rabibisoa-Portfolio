@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452.65 442.18">
+  <defs>
+    <style>
+      .b {
+        fill: #2d0402;
+      }
+
+      .b, .c {
+        stroke-width: 0px;
+      }
+
+      .c {
+        fill: #ff9a00;
+      }
+    </style>
+  </defs>
+  <rect class="b" width="452.65" height="442.18" rx="81.29" ry="81.29"/>
+  <g>
+    <rect class="c" x="309.1" y="177.06" width="41.41" height="151.36"/>
+    <circle class="c" cx="329.8" cy="137.56" r="23.8"/>
+    <path class="c" d="M219.41,128.99h-53.34c0,8.97-1.56,17.87-4.6,26.31l-62.42,173.13h43.7l15.7-47.7,70.03-.51,16,48.21h46.21l-71.28-199.43h0ZM169.94,241.68l22.77-77.42,23.89,77.42h-46.66Z"/>
+  </g>
+</svg>

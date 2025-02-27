@@ -1,5 +1,5 @@
-import logo from "../../assets/logo";
-import Card from "../../components/Card";
+import logo from "../../../assets/logo";
+import Card from "../../../components/Card";
 
 export default function Python() {
   return (

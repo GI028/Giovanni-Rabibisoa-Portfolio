@@ -1,6 +1,6 @@
-import logo from "../../assets/logo"
-import Card from "../../components/Card"
-import SquareImage from "../../components/HTML/SquareImage"
+import logo from "../../../assets/logo"
+import Card from "../../../components/Card"
+import SquareImage from "../../../components/HTML/SquareImage"
 
 export default function Languages() {
   return (
