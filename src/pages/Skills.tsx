@@ -4,9 +4,10 @@ import FullHeight from "../components/HTML/FullHeight"
 import Sidebar from "./Skills/SideBar"
 import Informatics from "./Skills/Informatics"
 import Electronics from "./Skills/Electronics"
+import Humans from "./Skills/Humans"
 
 const sectionTitles = ["SideBar", "Informatics", "Electronics", "Humans"]
-const sections = [Informatics, Electronics, Informatics]
+const sections = [Informatics, Electronics, Humans]
 
 export default function Skills() {
   const [activeSection, setActiveSection] = useState<string>(sectionTitles[0])
