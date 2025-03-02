@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.54 476.54">
+  <defs>
+    <style>
+      .b {
+        fill: #f05133;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .c {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="b" x="62.14" y="61.63" width="352.26" height="353.28" rx="30.6" ry="30.6" transform="translate(-98.69 238.27) rotate(-45)"/>
+  <g>
+    <rect class="c" x="225.95" y="31.66" width="29.96" height="221.4" transform="translate(-30.1 212.06) rotate(-45)"/>
+    <rect class="c" x="225.58" y="173.16" width="29.96" height="135.64"/>
+    <circle class="c" cx="337.84" cy="240.77" r="36.43"/>
+    <circle class="c" cx="239.35" cy="142.28" r="36.43"/>
+    <circle class="c" cx="239.26" cy="339.34" r="36.43"/>
+  </g>
+</svg>

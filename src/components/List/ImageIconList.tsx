@@ -1,10 +1,10 @@
 import Tooltip from "../HTML/Tooltip"
 import SquareImage from "../HTML/SquareImage"
-import { ImageIcon } from "../../data/Skills/typesAndFunctions"
+import { ImageInfo } from "../../data/Skills/typesAndFunctions"
 
 type Props = {
   imageSize?: number
-  list: ImageIcon[]
+  list: ImageInfo[]
 }
 
 export default function ImageIconList({ imageSize = 10, list }: Props) {

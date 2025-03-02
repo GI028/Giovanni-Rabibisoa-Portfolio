@@ -1,7 +1,7 @@
 import logo from "../../assets/logo"
-import { ImageIcon } from "./typesAndFunctions"
+import { ImageInfo } from "./typesAndFunctions"
 
-export const electronicsSkills: ImageIcon[] = [
+export const electronicsSkills: ImageInfo[] = [
   {
     image: logo.arduino,
     title: "Arduino",

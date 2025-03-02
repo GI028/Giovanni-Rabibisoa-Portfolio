@@ -8,9 +8,9 @@ import {
   FaCogs,
   FaFlask,
 } from "react-icons/fa"
-import { AISkill, imageIcon, ImageIcon } from "./typesAndFunctions"
+import { IconInfo, imageIcon, ImageInfo } from "./typesAndFunctions"
 
-const programingLanguages: ImageIcon[] = [
+const programingLanguages: ImageInfo[] = [
   imageIcon(logo.js, "JavaScript"),
   imageIcon(logo.ts, "TypeScript"),
   imageIcon(logo.php, "PHP"),
@@ -23,7 +23,7 @@ const programingLanguages: ImageIcon[] = [
   imageIcon(logo.java, "Java"),
 ]
 
-const frameworksAndLibraries: ImageIcon[] = [
+const frameworksAndLibraries: ImageInfo[] = [
   imageIcon(logo.bootstrap, "Bootstrap"),
   imageIcon(logo.tailwind, "Tailwind"),
   imageIcon(logo.w3schools, "W3 CSS"),
@@ -39,7 +39,7 @@ const frameworksAndLibraries: ImageIcon[] = [
   imageIcon(logo.openCV, "OpenCV"),
 ]
 
-const databases: ImageIcon[] = [
+const databases: ImageInfo[] = [
   imageIcon(logo.mysql, "MySQL"),
   imageIcon(logo.postgreSql, "PostgreSQL"),
   imageIcon(logo.sqlite, "SQLite"),
@@ -48,16 +48,17 @@ const databases: ImageIcon[] = [
   imageIcon(logo.msAccess, "Microsoft Access"),
 ]
 
-const softwares: ImageIcon[] = [
+const softwares: ImageInfo[] = [
   imageIcon(logo.photoshop, "Adobe Photoshop"),
   imageIcon(logo.illustrator, "Adobe Illustrator"),
   imageIcon(logo.msWord, "Microsoft Word"),
   imageIcon(logo.msExcel, "Microsoft Excel"),
   imageIcon(logo.msPPT, "Microsoft PowerPoint"),
   imageIcon(logo.blender, "Blender"),
+  imageIcon(logo.git, "Git"),
 ]
 
-const aiConcepts: AISkill[] = [
+const aiConcepts: IconInfo[] = [
   {
     icon: FaBrain,
     title: "Deep Learning",

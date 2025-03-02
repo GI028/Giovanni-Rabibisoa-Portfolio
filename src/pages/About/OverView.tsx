@@ -11,7 +11,7 @@ import FullHeight from "../../components/HTML/FullHeight"
 
 export default function OverView() {
   return (
-    <FullHeight skipNavbar className="flex flex-col-reverse sm:flex-row sm:space-x-5  justify-items-stretch items-center pb-16 border-b-2 border-bg-2">
+    <FullHeight skipNavbar className="flex flex-col-reverse sm:flex-row sm:space-x-5  justify-items-stretch items-center pb-16 sm:pb-0 border-b-2 border-bg-2">
       <div className="flex-3 space-y-6">
         <h3 className="text-xl font-bold text-text-2">Hello it's me</h3>
         <h1 className="text-4xl font-bold text-text">Giovanni Rabibisoa</h1>

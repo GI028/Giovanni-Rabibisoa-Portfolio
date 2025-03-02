@@ -23,7 +23,7 @@ export type BaseInfo = {
   description?: string
 }
 
-export type ImageIcon = BaseInfo & {
+export type ImageInfo = BaseInfo & {
   image: string
 }
 
@@ -31,10 +31,16 @@ export function imageIcon(
   image: string,
   title: string,
   description?: string
-): ImageIcon {
+): ImageInfo {
   return { image, title, description }
 }
 
-export interface AISkill extends BaseInfo {
+
+export interface Section<T> { 
+  title: string
+  data: T[]
+}
+
+export interface IconInfo extends BaseInfo {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }

@@ -1,130 +1,128 @@
 import logo from "../../assets/logo"
-import { ImageIcon } from "./typesAndFunctions"
+import {
+  FaLightbulb,
+  FaUsers,
+  FaClock,
+  FaBrain,
+  FaComments,
+  FaTools,
+  FaProjectDiagram,
+  FaPuzzlePiece,
+  FaMicrophone,
+  FaSync,
+  FaCheckCircle,
+} from "react-icons/fa";
+import { IconInfo, ImageInfo } from "./typesAndFunctions";
+// import { ImageIcon } from "./typesAndFunctions"
 
-const languageSkills: ImageIcon[] = [
+export const languageSkills: ImageInfo[] = [
   {
-    image: logo.malagasy,
+    image: logo.madagascarFlag,
     title: "Malagasy",
     description: "Native language with full fluency in speaking and writing.",
   },
   {
-    image: logo.french,
+    image: logo.frenchFlag,
     title: "French",
     description:
       "Fluent in speaking, reading, and writing with professional proficiency.",
   },
   {
-    image: logo.english,
+    image: logo.englishFlag,
     title: "English",
     description:
       "Strong command of English for professional and academic communication.",
   },
   {
-    image: logo.indonesian,
+    image: logo.indonesianFlag,
     title: "Indonesian",
     description:
       "Proficient in Indonesian for verbal and written communication.",
   },
   {
-    image: logo.malay,
+    image: logo.malaisianFlag,
     title: "Malay",
     description:
       "Conversational level with good understanding of spoken Malay.",
   },
 ]
 
-const professionalAptitudes: ImageIcon[] = [
+// ✅ Professional Aptitudes (Using icons)
+export const professionalAptitudes: IconInfo[] = [
   {
-    image: logo.problemSolving,
+    icon: FaBrain,
     title: "Analytical Thinking",
     description:
       "Ability to analyze complex situations and provide effective solutions.",
   },
   {
-    image: logo.adaptability,
+    icon: FaSync,
     title: "Adaptability",
     description:
       "Quick to learn and adjust to new challenges and technologies.",
   },
   {
-    image: logo.timeManagement,
+    icon: FaClock,
     title: "Time Management",
     description:
       "Highly organized, meeting deadlines and handling multiple projects efficiently.",
   },
   {
-    image: logo.workEthic,
+    icon: FaCheckCircle,
     title: "Strong Work Ethic",
     description: "Dedicated and committed to delivering high-quality results.",
   },
-]
-
-const personalQualities: ImageIcon[] = [
   {
-    image: logo.patience,
-    title: "Patience & Perseverance",
-    description:
-      "Committed to continuous improvement and overcoming obstacles.",
+    icon: FaTools,
+    title: "Technical Expertise",
+    description: "Strong grasp of technical concepts and execution.",
   },
   {
-    image: logo.positivity,
-    title: "Positive Attitude",
-    description: "Brings enthusiasm and motivation to work and projects.",
-  },
-  {
-    image: logo.creativity,
-    title: "Creativity & Innovation",
-    description: "Able to think outside the box and develop unique solutions.",
-  },
-]
-
-const collaborationAndLeadership: ImageIcon[] = [
-  {
-    image: logo.teamwork,
-    title: "Team Collaboration",
-    description:
-      "Works effectively with teams, ensuring smooth project execution.",
-  },
-  {
-    image: logo.publicSpeaking,
-    title: "Public Speaking",
-    description: "Comfortable in presenting and communicating ideas clearly.",
-  },
-  {
-    image: logo.projectManagement,
+    icon: FaProjectDiagram,
     title: "Project Management",
-    description:
-      "Experienced in organizing and leading technical and research projects.",
-  },
-  {
-    image: logo.decisionMaking,
-    title: "Decision Making",
-    description: "Capable of making informed choices under pressure.",
+    description: "Organizes and leads projects successfully.",
   },
 ]
 
-const problemSolvingAndCreativity: ImageIcon[] = [
+// ✅ Collaboration & Leadership
+export const collaborationLeadership: IconInfo[] = [
   {
-    image: logo.problemSolving,
+    icon: FaUsers,
+    title: "Team Collaboration",
+    description: "Works effectively with diverse teams.",
+  },
+  {
+    icon: FaMicrophone,
+    title: "Public Speaking",
+    description: "Confident in presenting and engaging audiences.",
+  },
+  {
+    icon: FaComments,
+    title: "Interpersonal Skills",
+    description: "Excellent communicator and team player.",
+  },
+  {
+    icon: FaPuzzlePiece,
+    title: "Problem Solving",
+    description: "Finds solutions in complex scenarios.",
+  },
+]
+
+// ✅ Problem Solving & Creativity
+export const problemSolvingCreativity: IconInfo[] = [
+  {
+    icon: FaLightbulb,
+    title: "Creativity",
+    description: "Innovative and always looking for new ideas.",
+  },
+  {
+    icon: FaBrain,
     title: "Critical Thinking",
-    description: "Strong logical reasoning to solve problems effectively.",
+    description: "Strong logical reasoning for effective solutions.",
   },
   {
-    image: logo.innovation,
-    title: "Innovation",
-    description: "Constantly seeking new ideas and approaches.",
-  },
-  {
-    image: logo.resilience,
+    icon: FaClock,
     title: "Resilience",
-    description: "Thrives in challenging situations and adapts to change.",
+    description: "Adapts well to change and challenges.",
   },
 ]
-
-export {
-  languageSkills,
-  collaborationAndLeadership,
-  personalQualities,
-  problemSolvingAndCreativity,
-  professionalAptitudes,
-}
