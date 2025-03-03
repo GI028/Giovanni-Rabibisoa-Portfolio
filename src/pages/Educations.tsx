@@ -1,44 +1,54 @@
-import ExperienceTimeline from "../components/Timeline/ExperienceTimeline"
 import Container from "../components/HTML/Container"
 import FullHeight from "../components/HTML/FullHeight"
 import { diplomas } from "../data/Educations/diplomas"
-
+import { FaGraduationCap } from "react-icons/fa"
 
 export default function Educations() {
   return (
     <Container>
       <FullHeight skipNavbar>
         <section className="py-16">
-            {diplomas.map((diploma, index) => {
-              const isFirst = index === 0
-              const isLast = index === diplomas.length - 1
-              return (
-                <ExperienceTimeline
-                  key={index}
-                  time={
-                    <span className="pl-5 xs:pl-10 sm:pl-40 right-0 relative text-text-2 group-hover:text-text group-hover:right-10 transition-all duration-300 ease-in">
+          <h1 className="text-3xl font-bold text-text mb-10 flex items-center">
+            <FaGraduationCap className="mr-3" />
+            Education
+          </h1>
+          <div className="grid gap-8 xs:grid-cols-2 md:grid-cols-3">
+            {diplomas.map((diploma, index) => (
+              <div
+                key={index}
+                className="bg-bg-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="bg-primary p-4 flex justify-between items-center">
+                  <div className="space-y-2">
+                  <h3 className="font-bold text-xl text-white">
+                    {diploma.name}
+                  </h3>
+                  <p className="text-sm text-gray-200 italic">
+                    {diploma.institue}
+                  </p>
+                  </div>
+                  <div>
+                    <span className="text-sm text-primary font-semibold bg-opacity-20 bg-white px-3 py-1 rounded-full">
                       {diploma.date}
                     </span>
-                  }
-                  isFirst={isFirst}
-                  isLast={isLast}
-                  spacing={10}
-                >
-                  <div className="space-y-5 pl-5 sm:pl-15 ">
-                    <h3 className="font-bold text-xl text-text group-hover:text-2xl transition-all duration-300 ease-in">
-                      {diploma.name}
-                    </h3>
-                    <p className="text-sm text-text-2">{diploma.cursus}</p>
-                    <p className="text-sm">{diploma.institue}</p>
-                    <ul className="list-disc list-outside ml-4 text-justify">
-                      {diploma.descriptions.map((description, index) => (
-                        <li key={index}>{description}</li>
-                      ))}
-                    </ul>
                   </div>
-                </ExperienceTimeline>
-              )
-            })}
+                </div>
+                <div className="p-6">
+                  <p className="text-sm text-text-2 mb-2 font-semibold">
+                    {diploma.cursus}
+                  </p>
+                  
+                  <ul className="list-disc list-inside space-y-2 text-text-2">
+                    {diploma.descriptions.map((description, index) => (
+                      <li key={index} className="text-sm">
+                        {description}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
       </FullHeight>
     </Container>

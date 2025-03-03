@@ -38,6 +38,10 @@ export default function NavBar({ className }: Props) {
 
   useEffect(() => {
     if (visible) setVisible(false)
+    document.body.scrollIntoView({
+      behavior: "instant",
+      block: "start",
+    })
   }, [pathname])
 
   const toggleNavbar = () => {

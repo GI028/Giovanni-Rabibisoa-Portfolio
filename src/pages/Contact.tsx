@@ -7,10 +7,12 @@ export default function Contact() {
   return (
     <div className="pt-4 md:pt-0">
       <FullHeight
+        onDefaultSize={false}
+        onSm
         skipNavbar
         className="flex mb-4 md:mb-0 items-stretch gap-4 flex-col md:flex-row md:items-center"
       >
-        <div className="flex items-center justify-between">
+        <div className="sm:flex items-center justify-between hidden">
           <ContactPicture />
           <div className="hidden sm:block md:hidden flex-grow-1">
             <div className="w-fit m-auto">
