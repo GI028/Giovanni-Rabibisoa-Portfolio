@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router"
+import { Navigate, Route, Routes } from "react-router"
 import NavBar from "./components/Navigation/NavBar"
 import About from "./pages/About"
 import Skills from "./pages/Skills"
@@ -18,15 +18,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/educations" element={<Educations />} />
         <Route path="/skills" element={<Skills />} />
-        <Route
-          path="/projects"
-          element={
-            <div className="mt-16">
-              <Projects />
-            </div>
-          }
-        />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   )
