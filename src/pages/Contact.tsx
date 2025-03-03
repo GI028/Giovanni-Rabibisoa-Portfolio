@@ -25,7 +25,7 @@ export default function Contact() {
         </div>
       </FullHeight>
       <div className="block sm:hidden md:block">
-      <ContactList />
+        <ContactList />
       </div>
     </div>
   )

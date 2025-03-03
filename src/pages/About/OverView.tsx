@@ -11,11 +11,17 @@ import FullHeight from "../../components/HTML/FullHeight"
 
 export default function OverView() {
   return (
-    <FullHeight skipNavbar className="flex flex-col-reverse sm:flex-row sm:space-x-5  justify-items-stretch items-center pb-16 sm:pb-0 border-b-2 border-bg-2">
+    <FullHeight
+      skipNavbar
+      className="flex flex-col-reverse sm:flex-row sm:space-x-5  justify-items-stretch items-center pb-16 sm:pb-0 border-b-2 border-bg-2"
+    >
       <div className="flex-3 space-y-6">
         <h3 className="text-xl font-bold text-text-2">Hello it's me</h3>
         <h1 className="text-4xl font-bold text-text">Giovanni Rabibisoa</h1>
-        <p className="text-xl font-bold text-text-2">And i'm a <strong className="text-text font-bold">FullStack Developper</strong></p>
+        <p className="text-xl font-bold text-text-2">
+          And i'm a{" "}
+          <strong className="text-text font-bold">FullStack Developper</strong>
+        </p>
         <p className="text-justify">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
           eveniet placeat expedita odio sapiente aut sed reiciendis vel amet
@@ -55,7 +61,11 @@ export default function OverView() {
           {/* <FaDotCircle size={250} className="stack glow text-primary rotate-170" /> */}
           <div className="size-100">
             <div className="size-full stack flex justify-center">
-              <img src={Profile} alt="" className="h-full bg-primary rounded-full " />
+              <img
+                src={Profile}
+                alt=""
+                className="h-full bg-primary rounded-full "
+              />
             </div>
           </div>
         </div>
