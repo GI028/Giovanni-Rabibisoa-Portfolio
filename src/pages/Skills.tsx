@@ -19,6 +19,9 @@ export default function Skills() {
   }
 
   useEffect(() => {
+    const isSmallScreen = window.innerWidth < 768
+    if (isSmallScreen) return
+
     const timeout = setTimeout(() => {
       isObserving.current = false
       sectionRefs.current[activeSection]?.scrollIntoView({
@@ -34,13 +37,10 @@ export default function Skills() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const isSmallScreen = window.innerWidth < 768
-
         if (!isObserving.current) return
 
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (!isSmallScreen && entry.target.id === sectionTitles[0]) return
             setActiveSection(entry.target.id)
           }
         })
@@ -58,10 +58,7 @@ export default function Skills() {
   return (
     <Container>
       <FullHeight className="flex flex-col md:flex-row items-center gap-4">
-        <div
-          id={sectionTitles[0]}
-          ref={(el) => (sectionRefs.current[sectionTitles[0]] = el)}
-        >
+        <div>
           <Sidebar
             sections={sectionTitles.slice(1)}
             activeSection={activeSection}
