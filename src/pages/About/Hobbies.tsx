@@ -5,6 +5,7 @@ import Music from "../../assets/animations/MusicPlay.json"
 import Read from "../../assets/animations/ReadBooks.json"
 import Sport from "../../assets/animations/Sport.json"
 import Button from "../../components/FormComponents/Button"
+import { motion } from "motion/react"
 
 type Hobbie = {
   name: string
@@ -47,14 +48,21 @@ export default function Hobbies() {
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {datas.map((hobby, index) => (
-          <LottieCard
-            animation={hobby.animation}
+          <motion.div
             key={index}
-            contentClassName="space-y-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.2 + 0.5 }}
           >
-            <h1 className="text-text text-lg">{hobby.name}</h1>
-            <p>{hobby.description}</p>
-          </LottieCard>
+            <LottieCard
+              animation={hobby.animation}
+              contentClassName="space-y-3"
+              className="w-full h-full"
+            >
+              <h1 className="text-text text-lg">{hobby.name}</h1>
+              <p>{hobby.description}</p>
+            </LottieCard>
+          </motion.div>
         ))}
       </div>
       <div className="mt-16">

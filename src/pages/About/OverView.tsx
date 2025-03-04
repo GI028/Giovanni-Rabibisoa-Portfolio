@@ -7,6 +7,7 @@ import {
 import Button from "../../components/FormComponents/Button"
 import Profile from "../../assets/myPhotos/myProfile.png"
 import FullHeight from "../../components/HTML/FullHeight"
+import { motion } from "motion/react"
 // import { IoTriangle } from "react-icons/io5"
 
 export default function OverView() {
@@ -15,7 +16,7 @@ export default function OverView() {
       skipNavbar
       className="flex flex-col-reverse sm:flex-row sm:space-x-5  justify-items-stretch items-center pb-16 sm:pb-0 border-b-2 border-bg-2"
     >
-      <div className="flex-3 space-y-6">
+      <motion.div className="flex-3 space-y-6" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{duration:0.5,easings:'easeIn'}}>
         <h3 className="text-xl font-bold text-text-2">Hello it's me</h3>
         <h1 className="text-4xl font-bold text-text">Giovanni Rabibisoa</h1>
         <p className="text-xl font-bold text-text-2">
@@ -53,20 +54,20 @@ export default function OverView() {
           </li>
         </ul>
         <Button>Download CV</Button>
-      </div>
+      </motion.div>
       <div className="flex-1 md:flex-2 lg:flex-3 my-10 md:my-0">
         <div className="size-fit mx-auto rounded-full relative">
           {/* <IoTriangle  size={250} className="stack glow text-primary rotate-190" />
           <IoTriangle  size={250} className="stack glow text-primary rotate-170" /> */}
           {/* <FaDotCircle size={250} className="stack glow text-primary rotate-170" /> */}
           <div className="size-100">
-            <div className="size-full stack flex justify-center">
+            <motion.div className="size-full stack flex justify-center" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{duration:0.5,easings:'easeIn',delay:0.1}} exit='exit'>
               <img
                 src={Profile}
                 alt=""
                 className="h-full bg-primary rounded-full "
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

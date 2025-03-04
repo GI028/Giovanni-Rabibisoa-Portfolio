@@ -63,7 +63,7 @@ export default function Tooltip({
   }, [preferredPosition])
 
   return (
-    <div>
+    <div className="h-full">
       <div
         ref={containerRef}
         className="relative h-full flex items-center group overflow-hidden hover:overflow-visible"

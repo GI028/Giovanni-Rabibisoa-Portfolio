@@ -1,5 +1,5 @@
 interface SkillSectionProps<T> {
-  title: string
+  title: React.ReactNode
   data: T[]
   renderItem: (item: T, index: number) => React.ReactNode
   gap?: number
@@ -18,5 +18,6 @@ const SkillSection = <T,>({
     </div>
   </div>
 )
+
 
 export default SkillSection

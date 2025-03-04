@@ -5,6 +5,7 @@ import { TbExternalLink } from "react-icons/tb"
 import logo from "../assets/logo"
 import SquareImage from "../components/HTML/SquareImage"
 import Container from "../components/HTML/Container"
+import { motion } from "motion/react"
 
 const Projects: React.FC = () => {
   return (
@@ -14,12 +15,17 @@ const Projects: React.FC = () => {
         className="bg-bg text-white py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
       >
         <div className="mt-4">
-          <h1 className="text-2xl font-bold text-center mb-12 mt-4 xs:hidden">My Projects</h1>
+          <h1 className="text-2xl font-bold text-center mb-12 mt-4 xs:hidden">
+            My Projects
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 key={index}
-                className="bg-bg-2 p-2 group overflow-hidden flex flex-col relative rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl"
+                className="bg-bg-2 p-2 group overflow-hidden flex flex-col relative rounded-lg shadow-lg hover:shadow-2xl"
               >
                 <a
                   href={project.url}
@@ -61,7 +67,7 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

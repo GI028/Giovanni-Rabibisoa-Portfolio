@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 import Container from "../components/HTML/Container"
 import FullHeight from "../components/HTML/FullHeight"
 import { diplomas } from "../data/Educations/diplomas"
@@ -12,7 +13,10 @@ export default function Educations() {
           </h1>
           <div className="grid gap-8 xs:grid-cols-2">
             {diplomas.map((diploma, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 key={index}
                 className="bg-bg-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
@@ -44,7 +48,7 @@ export default function Educations() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>

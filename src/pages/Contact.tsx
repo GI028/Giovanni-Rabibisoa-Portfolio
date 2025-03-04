@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 import FullHeight from "../components/HTML/FullHeight"
 import ContactForm from "./Contact/ContactForm"
 import ContactList from "./Contact/ContactList"
@@ -13,16 +14,18 @@ export default function Contact() {
         className="flex mb-4 md:mb-0 items-stretch gap-4 flex-col md:flex-row md:items-center"
       >
         <div className="sm:flex items-center justify-between hidden">
-          <ContactPicture />
-          <div className="hidden sm:block md:hidden flex-grow-1">
+          <motion.div initial={{opacity:0, x:-50}} animate={{opacity:1, x:0}} transition={{duration:0.3}}>
+            <ContactPicture />
+          </motion.div>
+          <motion.div className="hidden sm:block md:hidden flex-grow-1"  initial={{opacity:0, x:50}} animate={{opacity:1, x:0}} transition={{duration:0.3}}>
             <div className="w-fit m-auto">
               <ContactList />
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex-grow-1">
+        <motion.div className="flex-grow-1" initial={{opacity:0, y:50}} animate={{opacity:1, y:0}} transition={{duration:0.3}}>
           <ContactForm />
-        </div>
+        </motion.div>
       </FullHeight>
       <div className="block sm:hidden md:block">
         <ContactList />

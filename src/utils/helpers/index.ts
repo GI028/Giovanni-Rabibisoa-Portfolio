@@ -44,4 +44,19 @@ function loadAssetsWithKeys(
   return result
 }
 
-export { concatClassNames as cn, loadAssets, loadAssetsWithKeys}
+export type MinMax = { min: number; max: number }
+const createRandomDelays = (
+  ref: React.MutableRefObject<number[]>,
+  length: number,
+  interval: MinMax={ min : 0, max : 0.4 }
+): void => {
+  if (ref.current.length < length) {
+    for (let i = ref.current.length; i < length; i++) {
+      ref.current.push(
+        Math.round((interval.min + (interval.max - interval.min) * Math.random()) * 100) / 100
+      ) // Adjust delay time as needed for loading assets in real-world scenario.
+    }
+  }
+}
+
+export { concatClassNames as cn, loadAssets, loadAssetsWithKeys, createRandomDelays}

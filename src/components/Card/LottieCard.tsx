@@ -5,6 +5,7 @@ import Card from "."
 type Props = {
   children: React.ReactNode
   animation: object
+  className?: string
   animationClassName?: string
   contentClassName?: string
 }
@@ -12,6 +13,7 @@ type Props = {
 export default function LottieCard({
   animation,
   children,
+  className,
   animationClassName,
   contentClassName,
 }: Props) {
@@ -20,6 +22,7 @@ export default function LottieCard({
       head={<Lottie animationData={animation} />}
       headClassName={animationClassName}
       contentClassName={contentClassName}
+      className={className}
     >
       {children}
     </Card>

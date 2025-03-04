@@ -71,6 +71,7 @@ export default function Skills() {
         <div className="md:flex-1 w-full md:w-auto">
           {sections.map((Section, index) => (
             <div
+              key={index}
               id={sectionTitles[index + 1]}
               ref={(el) => (sectionRefs.current[sectionTitles[index + 1]] = el)}
             >
