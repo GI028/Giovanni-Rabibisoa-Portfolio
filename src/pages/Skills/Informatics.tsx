@@ -11,6 +11,7 @@ import SkillSection from "./component/SkillSection.tsx"
 import LabeledIcon from "./component/LabeledIcon.tsx"
 import { motion } from "motion/react"
 import { createRandomDelays } from "../../utils/helpers/index.ts"
+import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants.ts"
 
 const imageSections: Section<ImageInfo>[] = [
   { title: "Programming Languages", data: data.programingLanguages },
@@ -45,7 +46,7 @@ const Informatics: React.FC = () => {
   createRandomDelays(aiSectionDelays, aiSection.data.length)
 
   return (
-    <div className="space-y-5">
+    <motion.div initial="initial" whileInView="inView" className="space-y-5">
       {imageSections.map(({ title, data }, sectionIndex) => {
         const currentShift = lastImageSkillLength
         lastImageSkillLength += data.length
@@ -54,8 +55,7 @@ const Informatics: React.FC = () => {
             key={sectionIndex}
             title={
               <motion.p
-                initial={{ opacity: 0, x: 150 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                variants={fromRightVariant}
                 transition={{ duration: 0.3, delay: titleDelay * sectionIndex }}
               >
                 {title}
@@ -65,8 +65,7 @@ const Informatics: React.FC = () => {
             renderItem={(item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: "0" }}
-                whileInView={{ opacity: 1, scale: "100%" }}
+                variants={scaleVariant}
                 transition={{
                   duration: 0.3,
                   delay: imageSkillsDelays.current[index + currentShift],
@@ -82,8 +81,7 @@ const Informatics: React.FC = () => {
         gap={2}
         title={
           <motion.p
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fromRightVariant}
             transition={{
               duration: 0.3,
               delay: titleDelay * (imageSections.length + 1),
@@ -96,8 +94,7 @@ const Informatics: React.FC = () => {
         renderItem={(item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={fromBottomVariant}
             transition={{
               duration: 0.3,
               delay: aiSectionDelays.current[index],
@@ -110,8 +107,7 @@ const Informatics: React.FC = () => {
       <SkillSection<ImageInfo>
         title={
           <motion.p
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fromRightVariant}
             transition={{
               duration: 0.3,
               delay: titleDelay * (imageSections.length + 2),
@@ -124,15 +120,14 @@ const Informatics: React.FC = () => {
         renderItem={(item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: "0" }}
-            whileInView={{ opacity: 1, scale: "100%" }}
+            variants={scaleVariant}
             transition={{ duration: 0.3, delay: othersDelays.current[index] }}
           >
             <ImageSkillItem key={index} {...item} />
           </motion.div>
         )}
       />
-    </div>
+    </motion.div>
   )
 }
 

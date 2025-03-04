@@ -5,6 +5,7 @@ import Tooltip from "../../components/HTML/Tooltip"
 import { motion } from "motion/react"
 import { useRef } from "react"
 import { createRandomDelays } from "../../utils/helpers"
+import { scaleVariant } from "../../animations/variants"
 
 export default function Electronics() {
   const delays = useRef<number[]>([])
@@ -17,12 +18,11 @@ export default function Electronics() {
         communication protocols, and automation. Here are some of the key
         technologies I work with:
       </p>
-      <div className="grid grid-cols-2 xs:grid-cols-4  gap-4">
+      <motion.div initial="initial" whileInView="inView" className="grid grid-cols-2 xs:grid-cols-4  gap-4">
         {electronicsSkills.map(({ image, title, description }, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: "0" }}
-            whileInView={{ opacity: 1, scale: "100%" }}
+            variants={scaleVariant}
             transition={{
               duration: 0.3,
               delay: delays.current[index],
@@ -44,7 +44,7 @@ export default function Electronics() {
             </Tooltip>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

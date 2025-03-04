@@ -12,6 +12,7 @@ import LabeledIcon from "./component/LabeledIcon"
 import { useRef } from "react"
 import { createRandomDelays } from "../../utils/helpers"
 import { motion } from "motion/react"
+import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants"
 
 const iconSections: Section<IconInfo>[] = [
   { title: "Collaboration and Leadership", data: data.collaborationLeadership },
@@ -38,12 +39,11 @@ export default function Humans() {
   createRandomDelays(languageSkillsDelays, languageSkills.data.length)
   createRandomDelays(iconSectionsDelays, iconSectionsDataLens)
   return (
-    <div className="space-y-5">
+    <motion.div initial="initial" whileInView="inView" className="space-y-5">
       <SkillSection<ImageInfo>
         title={
           <motion.p
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fromRightVariant}
             transition={{ duration: 0.3, delay: titleDelay * 0 }}
           >
             {languageSkills.title}
@@ -53,8 +53,7 @@ export default function Humans() {
         renderItem={(item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={fromBottomVariant}
             transition={{
               duration: 0.3,
               delay: languageSkillsDelays.current[index],
@@ -91,8 +90,7 @@ export default function Humans() {
             key={index}
             title={
               <motion.p
-                initial={{ opacity: 0, x: 150 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                variants={fromRightVariant}
                 transition={{ duration: 0.3, delay: titleDelay * (index + 1) }}
               >
                 {title}
@@ -102,8 +100,7 @@ export default function Humans() {
             renderItem={(item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: "0" }}
-                whileInView={{ opacity: 1, scale: "100%" }}
+                variants={scaleVariant}
                 transition={{
                   duration: 0.3,
                   delay: iconSectionsDelays.current[index + currentShift],
@@ -115,6 +112,6 @@ export default function Humans() {
           />
         )
       })}
-    </div>
+    </motion.div>
   )
 }
