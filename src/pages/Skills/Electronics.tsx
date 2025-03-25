@@ -3,13 +3,11 @@ import SquareImage from "../../components/HTML/SquareImage"
 import Card from "../../components/Card"
 import Tooltip from "../../components/HTML/Tooltip"
 import { motion } from "motion/react"
-import { useRef } from "react"
-import { createRandomDelays } from "../../utils/helpers"
 import { scaleVariant } from "../../animations/variants"
+import useRandomArray from "../../utils/hooks/useRandomArray"
 
 export default function Electronics() {
-  const delays = useRef<number[]>([])
-  createRandomDelays(delays, electronicsSkills.length)
+  const delays = useRandomArray(electronicsSkills.length)
   return (
     <div className="space-y-5">
       <p>
@@ -25,7 +23,7 @@ export default function Electronics() {
             variants={scaleVariant}
             transition={{
               duration: 0.3,
-              delay: delays.current[index],
+              delay: delays[index],
             }}
           >
             <Tooltip

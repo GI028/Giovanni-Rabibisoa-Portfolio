@@ -9,10 +9,9 @@ import {
 } from "../../data/Skills/typesAndFunctions"
 import SkillSection from "./component/SkillSection"
 import LabeledIcon from "./component/LabeledIcon"
-import { useRef } from "react"
-import { createRandomDelays } from "../../utils/helpers"
 import { motion } from "motion/react"
 import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants"
+import useRandomArray from "../../utils/hooks/useRandomArray"
 
 const iconSections: Section<IconInfo>[] = [
   { title: "Collaboration and Leadership", data: data.collaborationLeadership },
@@ -28,16 +27,16 @@ const languageSkills: Section<ImageInfo> = {
   data: data.languageSkills,
 }
 export default function Humans() {
-  const languageSkillsDelays = useRef<number[]>([])
-  const iconSectionsDelays = useRef<number[]>([])
   const iconSectionsDataLens = iconSections.reduce(
     (sum, section) => sum + section.data.length,
     0
   )
   let lastIconSectionsDataLens = 0
   const titleDelay = 0.2
-  createRandomDelays(languageSkillsDelays, languageSkills.data.length)
-  createRandomDelays(iconSectionsDelays, iconSectionsDataLens)
+
+  const languageSkillsDelays = useRandomArray(languageSkills.data.length)
+  const iconSectionsDelays = useRandomArray(iconSectionsDataLens)
+
   return (
     <motion.div initial="initial" whileInView="inView" className="space-y-5">
       <SkillSection<ImageInfo>
@@ -56,7 +55,7 @@ export default function Humans() {
             variants={fromBottomVariant}
             transition={{
               duration: 0.3,
-              delay: languageSkillsDelays.current[index],
+              delay: languageSkillsDelays[index],
             }}
           >
             <Tooltip
@@ -103,7 +102,7 @@ export default function Humans() {
                 variants={scaleVariant}
                 transition={{
                   duration: 0.3,
-                  delay: iconSectionsDelays.current[index + currentShift],
+                  delay: iconSectionsDelays[index + currentShift],
                 }}
               >
                 <LabeledIcon key={index} {...item} />

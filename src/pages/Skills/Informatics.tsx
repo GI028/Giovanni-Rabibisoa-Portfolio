@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import * as data from "../../data/Skills/Informatics.ts"
 import Tooltip from "../../components/HTML/Tooltip.tsx"
 import SquareImage from "../../components/HTML/SquareImage"
@@ -10,8 +10,8 @@ import {
 import SkillSection from "./component/SkillSection.tsx"
 import LabeledIcon from "./component/LabeledIcon.tsx"
 import { motion } from "motion/react"
-import { createRandomDelays } from "../../utils/helpers/index.ts"
 import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants.ts"
+import useRandomArray from "../../utils/hooks/useRandomArray.ts"
 
 const imageSections: Section<ImageInfo>[] = [
   { title: "Programming Languages", data: data.programingLanguages },
@@ -31,19 +31,16 @@ const ImageSkillItem: React.FC<ImageInfo> = ({ image, title }) => (
 )
 
 const Informatics: React.FC = () => {
-  const imageSkillsDelays = useRef<number[]>([])
   const imageSkillsDataLens = imageSections.reduce(
     (sum, section) => sum + section.data.length,
     0
   )
   let lastImageSkillLength = 0
-  const othersDelays = useRef<number[]>([])
-  const aiSectionDelays = useRef<number[]>([])
+  
   const titleDelay = 0.1
-
-  createRandomDelays(imageSkillsDelays, imageSkillsDataLens)
-  createRandomDelays(othersDelays, others.data.length)
-  createRandomDelays(aiSectionDelays, aiSection.data.length)
+  const imageSkillsDelays = useRandomArray(imageSkillsDataLens)
+  const othersDelays = useRandomArray(others.data.length)
+  const aiSectionDelays = useRandomArray(aiSection.data.length)
 
   return (
     <motion.div initial="initial" whileInView="inView" className="space-y-5">
@@ -68,7 +65,7 @@ const Informatics: React.FC = () => {
                 variants={scaleVariant}
                 transition={{
                   duration: 0.3,
-                  delay: imageSkillsDelays.current[index + currentShift],
+                  delay: imageSkillsDelays[index + currentShift],
                 }}
               >
                 <ImageSkillItem key={index} {...item} />
@@ -97,7 +94,7 @@ const Informatics: React.FC = () => {
             variants={fromBottomVariant}
             transition={{
               duration: 0.3,
-              delay: aiSectionDelays.current[index],
+              delay: aiSectionDelays[index],
             }}
           >
             <LabeledIcon key={index} {...item} />
@@ -121,7 +118,7 @@ const Informatics: React.FC = () => {
           <motion.div
             key={index}
             variants={scaleVariant}
-            transition={{ duration: 0.3, delay: othersDelays.current[index] }}
+            transition={{ duration: 0.3, delay: othersDelays[index] }}
           >
             <ImageSkillItem key={index} {...item} />
           </motion.div>
