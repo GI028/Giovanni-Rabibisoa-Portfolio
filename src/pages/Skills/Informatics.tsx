@@ -8,9 +8,13 @@ import {
   Section,
 } from "../../data/Skills/typesAndFunctions.ts"
 import SkillSection from "./component/SkillSection.tsx"
-import LabeledIcon from "./component/LabeledIcon.tsx"
-import { motion } from "motion/react"
-import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants.ts"
+import AnimatedLabeledIcon from "./component/AnimatedLabeledIcon.tsx"
+import { motion, Transition, Variants } from "motion/react"
+import {
+  fromBottomVariant,
+  fromRightVariant,
+  scaleVariant,
+} from "../../animations/variants.ts"
 import useRandomArray from "../../utils/hooks/useRandomArray.ts"
 
 const imageSections: Section<ImageInfo>[] = [
@@ -24,9 +28,22 @@ const aiSection: Section<IconInfo> = {
   data: data.aiConcepts,
 }
 
-const ImageSkillItem: React.FC<ImageInfo> = ({ image, title }) => (
+interface AnimatedImageInfoProps extends ImageInfo {
+  animation: {
+    variants: Variants
+    transition: Transition
+  }
+}
+
+const ImageSkillItem: React.FC<AnimatedImageInfoProps> = ({
+  image,
+  title,
+  animation,
+}) => (
   <Tooltip tip={title}>
-    <SquareImage src={image} className="w-10 rounded drop-shadow-sm" />
+    <motion.div variants={animation.variants} transition={animation.transition}>
+      <SquareImage src={image} className="w-10 rounded drop-shadow-sm" />
+    </motion.div>
   </Tooltip>
 )
 
@@ -36,7 +53,7 @@ const Informatics: React.FC = () => {
     0
   )
   let lastImageSkillLength = 0
-  
+
   const titleDelay = 0.1
   const imageSkillsDelays = useRandomArray(imageSkillsDataLens)
   const othersDelays = useRandomArray(others.data.length)
@@ -60,16 +77,17 @@ const Informatics: React.FC = () => {
             }
             data={data}
             renderItem={(item, index) => (
-              <motion.div
+              <ImageSkillItem
                 key={index}
-                variants={scaleVariant}
-                transition={{
-                  duration: 0.3,
-                  delay: imageSkillsDelays[index + currentShift],
+                {...item}
+                animation={{
+                  variants: scaleVariant,
+                  transition: {
+                    duration: 0.3,
+                    delay: imageSkillsDelays[index + currentShift],
+                  },
                 }}
-              >
-                <ImageSkillItem key={index} {...item} />
-              </motion.div>
+              />
             )}
           />
         )
@@ -89,16 +107,17 @@ const Informatics: React.FC = () => {
         }
         data={aiSection.data}
         renderItem={(item, index) => (
-          <motion.div
+          <AnimatedLabeledIcon
             key={index}
-            variants={fromBottomVariant}
-            transition={{
-              duration: 0.3,
-              delay: aiSectionDelays[index],
+            {...item}
+            animation={{
+              variants: fromBottomVariant,
+              transition: {
+                duration: 0.3,
+                delay: aiSectionDelays[index],
+              },
             }}
-          >
-            <LabeledIcon key={index} {...item} />
-          </motion.div>
+          />
         )}
       />
       <SkillSection<ImageInfo>
@@ -115,13 +134,14 @@ const Informatics: React.FC = () => {
         }
         data={others.data}
         renderItem={(item, index) => (
-          <motion.div
+          <ImageSkillItem
             key={index}
-            variants={scaleVariant}
-            transition={{ duration: 0.3, delay: othersDelays[index] }}
-          >
-            <ImageSkillItem key={index} {...item} />
-          </motion.div>
+            {...item}
+            animation={{
+              variants: scaleVariant,
+              transition: { duration: 0.3, delay: othersDelays[index] },
+            }}
+          />
         )}
       />
     </motion.div>

@@ -63,20 +63,18 @@ export default function Tooltip({
   }, [preferredPosition])
 
   return (
-    <div className="h-full">
+    <div
+      ref={containerRef}
+      className="relative h-full flex items-center group overflow-hidden hover:overflow-visible"
+    >
+      {children}
       <div
-        ref={containerRef}
-        className="relative h-full flex items-center group overflow-hidden hover:overflow-visible"
+        ref={tooltipRef}
+        className={`absolute ${getPositionClasses(
+          position
+        )} w-max h-fit text-sm text-text opacity-0 transition-all z-[1] group-hover:opacity-100`}
       >
-        {children}
-        <div
-          ref={tooltipRef}
-          className={`absolute ${getPositionClasses(
-            position
-          )} w-max h-fit text-sm text-text opacity-0 transition-all z-[1] group-hover:opacity-100`}
-        >
-          <div className="bg-bg-2 px-2 py-1 rounded h-fit">{tip}</div>
-        </div>
+        <div className="bg-bg-2 px-2 py-1 rounded h-fit">{tip}</div>
       </div>
     </div>
   )

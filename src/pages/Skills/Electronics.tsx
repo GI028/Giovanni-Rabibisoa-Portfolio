@@ -16,22 +16,27 @@ export default function Electronics() {
         communication protocols, and automation. Here are some of the key
         technologies I work with:
       </p>
-      <motion.div initial="initial" whileInView="inView" className="grid grid-cols-2 xs:grid-cols-4  gap-4">
+      <motion.div
+        initial="initial"
+        whileInView="inView"
+        className="grid grid-cols-2 xs:grid-cols-4  gap-4"
+      >
         {electronicsSkills.map(({ image, title, description }, index) => (
-          <motion.div
+          <Tooltip
             key={index}
-            variants={scaleVariant}
-            transition={{
-              duration: 0.3,
-              delay: delays[index],
-            }}
+            tip={
+              <p className="w-full h-full inline-block max-w-30 text-text-3">
+                {description}
+              </p>
+            }
           >
-            <Tooltip
-              tip={
-                <p className="w-full h-full inline-block max-w-30 text-text-3">
-                  {description}
-                </p>
-              }
+            <motion.div
+              variants={scaleVariant}
+              transition={{
+                duration: 0.3,
+                delay: delays[index],
+              }}
+              className="w-full h-full"
             >
               <Card
                 className="w-full h-full"
@@ -39,8 +44,8 @@ export default function Electronics() {
               >
                 <p className="w-full break-words">{title}</p>
               </Card>
-            </Tooltip>
-          </motion.div>
+            </motion.div>
+          </Tooltip>
         ))}
       </motion.div>
     </div>

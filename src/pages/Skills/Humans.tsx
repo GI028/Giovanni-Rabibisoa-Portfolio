@@ -8,9 +8,13 @@ import {
   Section,
 } from "../../data/Skills/typesAndFunctions"
 import SkillSection from "./component/SkillSection"
-import LabeledIcon from "./component/LabeledIcon"
+import AnimatedLabeledIcon from "./component/AnimatedLabeledIcon"
 import { motion } from "motion/react"
-import { fromBottomVariant, fromRightVariant, scaleVariant } from "../../animations/variants"
+import {
+  fromBottomVariant,
+  fromRightVariant,
+  scaleVariant,
+} from "../../animations/variants"
 import useRandomArray from "../../utils/hooks/useRandomArray"
 
 const iconSections: Section<IconInfo>[] = [
@@ -50,21 +54,20 @@ export default function Humans() {
         }
         data={languageSkills.data}
         renderItem={(item, index) => (
-          <motion.div
+          <Tooltip
             key={index}
-            variants={fromBottomVariant}
-            transition={{
-              duration: 0.3,
-              delay: languageSkillsDelays[index],
-            }}
+            tip={
+              <p className="w-full inline-block max-w-30 text-text-3">
+                {item.description}
+              </p>
+            }
           >
-            <Tooltip
-              key={index}
-              tip={
-                <p className="w-full inline-block max-w-30 text-text-3">
-                  {item.description}
-                </p>
-              }
+            <motion.div
+              variants={fromBottomVariant}
+              transition={{
+                duration: 0.3,
+                delay: languageSkillsDelays[index],
+              }}
             >
               <Card
                 className="w-24"
@@ -77,8 +80,8 @@ export default function Humans() {
               >
                 <p>{item.title}</p>
               </Card>
-            </Tooltip>
-          </motion.div>
+            </motion.div>
+          </Tooltip>
         )}
       />
       {iconSections.map(({ title, data }, index) => {
@@ -97,16 +100,17 @@ export default function Humans() {
             }
             data={data}
             renderItem={(item, index) => (
-              <motion.div
+              <AnimatedLabeledIcon
                 key={index}
-                variants={scaleVariant}
-                transition={{
-                  duration: 0.3,
-                  delay: iconSectionsDelays[index + currentShift],
+                {...item}
+                animation={{
+                  variants: scaleVariant,
+                  transition: {
+                    duration: 0.3,
+                    delay: iconSectionsDelays[index + currentShift],
+                  },
                 }}
-              >
-                <LabeledIcon key={index} {...item} />
-              </motion.div>
+              />
             )}
           />
         )
