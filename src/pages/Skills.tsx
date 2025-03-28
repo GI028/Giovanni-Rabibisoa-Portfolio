@@ -5,11 +5,13 @@ import Sidebar from "./Skills/SideBar"
 import Informatics from "./Skills/Informatics"
 import Electronics from "./Skills/Electronics"
 import Humans from "./Skills/Humans"
+import { useTranslation } from "react-i18next"
 
-const sectionTitles = ["SideBar", "Informatics", "Electronics", "Humans"]
+const sectionTitles = ["Informatics", "Electronics", "Humans"]
 const sections = [Informatics, Electronics, Humans]
 
 export default function Skills() {
+  const {t}= useTranslation()
   const [activeSection, setActiveSection] = useState<string>(sectionTitles[0])
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
   const isObserving = useRef(true)
@@ -60,7 +62,7 @@ export default function Skills() {
       <FullHeight className="flex flex-col md:flex-row items-center gap-4">
         <div>
           <Sidebar
-            sections={sectionTitles.slice(1)}
+            sections={sectionTitles}
             activeSection={activeSection}
             scrollToSection={scrollToSection}
           />
@@ -69,13 +71,13 @@ export default function Skills() {
           {sections.map((Section, index) => (
             <div
               key={index}
-              id={sectionTitles[index + 1]}
-              ref={(el) => (sectionRefs.current[sectionTitles[index + 1]] = el)}
+              id={sectionTitles[index]}
+              ref={(el) => (sectionRefs.current[sectionTitles[index]] = el)}
             >
               <FullHeight skipNavbar className="flex items-center md:max-w-150">
                 <div>
                   <h1 className="md:hidden mb-4 text-text text-2xl sticky top-17 z-1 bg-bg-3 px-2 py-1">
-                    {sectionTitles[index + 1]}
+                    {t(sectionTitles[index])}
                   </h1>
                   <Section />
                 </div>

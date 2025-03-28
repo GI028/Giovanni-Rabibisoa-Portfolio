@@ -61,38 +61,31 @@ const softwares: ImageInfo[] = [
 const aiConcepts: IconInfo[] = [
   {
     icon: FaBrain,
-    title: "Deep Learning",
-    description: "Neural networks for pattern recognition and decision making.",
+    title: "deepLearning",
   },
   {
     icon: FaLanguage,
     title: "NLP",
-    description: "Processing and understanding human language.",
   },
   {
     icon: FaChartLine,
-    title: "ML Algorithms",
-    description: "Supervised and unsupervised learning models.",
+    title: "ML",
   },
   {
     icon: FaEye,
-    title: "Computer Vision",
-    description: "Image processing and object detection.",
+    title: "computerVision",
   },
   {
     icon: FaDatabase,
-    title: "Data Processing",
-    description: "Cleaning and transforming raw data.",
+    title: "dataProcessing",
   },
   {
     icon: FaCogs,
-    title: "Model Tuning",
-    description: "Optimizing AI models for performance.",
+    title: "modelTuning",
   },
   {
     icon: FaFlask,
-    title: "AI Research",
-    description: "Exploring and developing new AI methodologies.",
+    title: "aiResearch",
   },
 ]
 

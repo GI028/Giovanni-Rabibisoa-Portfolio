@@ -1,8 +1,249 @@
 {
-    "Welcome to React": "Welcome to React and react-i18next",
-    "userNumber_zero": "No user {{gio}}",  
-    "userNumber_one": "User number: {{count}}",  
-    "userNumber": "Users number: {{count}}",   
-    "welcomeUser": "Welcome <1>user</1>! <3>default</3>",
-    "keyUnescaped": "dangerous {{-gio}}"
+  "About": "About",
+  "Educations": "Educations",
+  "Skills": "Skills",
+  "Projects": "Projects",
+  "Contact": "Contact",
+
+  "hello": "Hello, it's me,",
+  "fullstack": "And I'm a <1>Full-Stack Developer</1>",
+  "description": "I'm a versatile Full-Stack Developer skilled in both front-end and back-end development, creating seamless and scalable applications. With a strong foundation in AI, I integrate intelligent solutions into projects. Beyond software, my hands-on experience in electronics bridges the gap between hardware and software, enabling smart and IoT solutions. As a multilingual professional, I collaborate effectively across diverse teams. Let's connect and bring ideas to life with cutting-edge technology!",
+
+  "downloadCV": "Download CV",
+  "downloadLink": "https://marketplace.canva.com/EAF6AfG7q2I/2/0/1131w/canva-putih-dan-hitam-profesional-minimalis-cv-resume-template-K25EqSUcQWE.jpg",
+
+  "hobbiesSectionTitle": "Hobbies and Interests",
+  "hobbies": {
+    "coding": {
+      "title": "Coding",
+      "description": "I enjoy building projects, learning new technologies, and solving problems through code."
+    },
+    "music": {
+      "title": "Music",
+      "description": "Listening to and playing music boosts my creativity and focus."
+    },
+    "reading": {
+      "title": "Reading",
+      "description": "I love reading about technology, innovation, science, and personal development."
+    },
+    "sports": {
+      "title": "Sports",
+      "description": "I enjoy playing sports, especially football and basketball."
+    },
+    "3Dmodeling": {
+      "title": "3D Modeling",
+      "description": "I like creating 3D models and exploring design possibilities."
+    },
+    "anime": {
+      "title": "Anime",
+      "description": "I enjoy watching anime series and reading manga for inspiration."
+    },
+    "digitalCreation": {
+      "title": "Digital Creation",
+      "description": "I love creating digital art and content using various tools."
+    },
+    "movies": {
+      "title": "Movies",
+      "description": "I enjoy watching movies across different genres and cultures."
+    },
+    "traveling": {
+      "title": "Traveling",
+      "description": "Exploring new places and experiencing different cultures excites me."
+    },
+    "gaming": {
+      "title": "Gaming",
+      "description": "I love playing video games and immersing myself in virtual worlds."
+    }
+  },
+
+  "educations": {
+    "title": "Educational Background",
+    "masterOfInformatics": {
+      "name": "Master's in Computer Science",
+      "cursus": "Database and Software Engineering",
+      "learned": [
+        "Advanced study of software engineering, database design, and optimization.",
+        "Development of robust and scalable software applications.",
+        "Exploration of software architectures and IT project management methodologies.",
+        "Completion of an applied research project in computer science."
+      ]
+    },
+    "bachelorOfICT": {
+      "name": "Bachelor's Degree in ICT",
+      "cursus": "Electronics/Information and Communication Technologies",
+      "learned": [
+        "Gained expertise in electronics and telecommunications.",
+        "Studied embedded systems and digital technologies.",
+        "Completed a graduation project focused on the interconnection of computer and electronic systems."
+      ]
+    },
+    "bachelorOfInformatics": {
+      "name": "Bachelor's Degree in Computer Science",
+      "cursus": "Database and Software Engineering",
+      "learned": [
+        "Designed and managed relational and NoSQL databases.",
+        "Developed software and web/mobile applications.",
+        "Applied software engineering principles and optimization algorithms.",
+        "Implemented agile methodologies for project management."
+      ]
+    },
+    "baccalaureate": {
+      "name": "Baccalaureate",
+      "cursus": "Series D",
+      "learned": [
+        "Received scientific training with a focus on mathematics, physics, and biology.",
+        "Developed analytical and logical thinking for problem-solving."
+      ]
+    }
+  },
+
+  "skills": {
+    "title": "IT Engineer",
+    "description": "I build scalable web, mobile, and AI-driven solutions, combining full-stack development, machine learning, and embedded systems expertise."
+  },
+
+  "Informatics": "Informatics",
+  "Electronics": "Electronics",
+  "Humans": "Humans",
+
+  "Programming Languages": "Programming Languages",
+  "Frameworks and Libraries": "Frameworks and Libraries",
+  "RDBMS": "RDBMS",
+  "Others": "Others",
+
+  "Artificial Intelligence Skills": "Artificial Intelligence Skills",
+  "aiSkills": {
+    "deepLearning": {
+      "translation": "Deep Learning",
+      "description": "Neural networks for pattern recognition and decision-making."
+    },
+    "NLP": {
+      "translation": "NLP",
+      "description": "Processing and understanding human language."
+    },
+    "ML": {
+      "translation": "Machine Learning",
+      "description": "Supervised and unsupervised learning models."
+    },
+    "computerVision": {
+      "translation": "Computer Vision",
+      "description": "Image processing and object detection."
+    },
+    "dataProcessing": {
+      "translation": "Data Processing",
+      "description": "Cleaning and transforming raw data."
+    },
+    "modelTuning": {
+      "translation": "Model Tuning",
+      "description": "Optimizing AI models for better performance."
+    },
+    "aiResearch": {
+      "translation": "AI Research",
+      "description": "Exploring and developing new AI methodologies."
+    }
+  },
+
+  "electronicSkills": {
+    "description": "I have experience working with embedded systems and IoT technologies, including microcontrollers, sensors, communication protocols, and automation.",
+
+    "Arduino": {
+      "translation": "Arduino",
+      "description": "An open-source microcontroller platform for prototyping and automation."
+    },
+    "ESP Modules": {
+      "translation": "ESP Modules",
+      "description": "Wi-Fi & Bluetooth-enabled microcontrollers like ESP32 and ESP8266 for IoT projects."
+    },
+    "Raspberry Pi": {
+      "translation": "Raspberry Pi",
+      "description": "A small yet powerful single-board computer for embedded systems and AI applications."
+    },
+    "Sensors & Actuators": {
+      "translation": "Sensors & Actuators",
+      "description": "Various input/output components used in automation and data collection."
+    },
+    "LoRa Technology": {
+      "translation": "LoRa Technology",
+      "description": "Long-range wireless communication for IoT networks and smart cities."
+    },
+    "IoT Systems": {
+      "translation": "IoT Systems",
+      "description": "Developing connected devices for smart applications."
+    },
+    "Robotics & Automation": {
+      "translation": "Robotics & Automation",
+      "description": "Building intelligent robotic systems with AI integration."
+    },
+    "Solar Energy Systems": {
+      "translation": "Solar Energy Systems",
+      "description": "Designing and integrating solar-powered electronics for sustainable solutions."
+    }
+  },
+
+  "Language Skills": "Language Skills",
+  "Language Skills_description": {
+    "Malagasy": "Native language with full fluency in speaking and writing.",
+    "French": "Fluent in speaking, reading, and writing with professional proficiency.",
+    "English": "Strong command of English for professional and academic communication.",
+    "Indonesian": "Proficient in Indonesian for verbal and written communication.",
+    "Malaysian": "Conversational level with good understanding of spoken Malay."
+  },
+  "Malagasy": "Malagasy",
+  "French": "French",
+  "English": "English",
+  "Indonesian": "Indonesian",
+  "Malaysian": "Malaysian",
+
+  "Collaboration and Leadership": "Collaboration and Leadership",
+  "Collaboration and Leadership_description": {
+    "Team Collaboration": "Works effectively with diverse teams.",
+    "Public Speaking": "Confident in presenting and engaging audiences.",
+    "Interpersonal Skills": "Excellent communicator and team player.",
+    "Problem Solving": "Finds solutions in complex scenarios."
+  },
+  "Team Collaboration": "Team Collaboration",
+  "Public Speaking": "Public Speaking",
+  "Interpersonal Skills": "Interpersonal Skills",
+  "Problem Solving": "Problem Solving",
+
+  "Problem-Solving and Creativity": "Problem-Solving and Creativity",
+  "Problem-Solving and Creativity_description": {
+    "Creativity": "Innovative and always looking for new ideas.",
+    "Critical Thinking": "Strong logical reasoning for effective solutions.",
+    "Resilience": "Adapts well to change and challenges."
+  },
+  "Creativity": "Creativity",
+  "Critical Thinking": "Critical Thinking",
+  "Resilience": "Resilience",
+
+  "Professional Aptitudes": "Professional Aptitudes",
+  "Professional Aptitudes_description": {
+    "Analytical Thinking": "Ability to analyze complex situations and provide effective solutions.",
+    "Adaptability": "Quick to learn and adjust to new challenges and technologies.",
+    "Time Management": "Highly organized, meeting deadlines and handling multiple projects efficiently.",
+    "Strong Work Ethic": "Dedicated and committed to delivering high-quality results.",
+    "Technical Expertise": "Strong grasp of technical concepts and execution.",
+    "Project Management": "Organizes and leads projects successfully."
+  },
+  "Analytical Thinking": "Analytical Thinking",
+  "Adaptability": "Adaptability",
+  "Time Management": "Time Management",
+  "Strong Work Ethic": "Strong Work Ethic",
+  "Technical Expertise": "Technical Expertise",
+  "Project Management": "Project Management",
+
+  "Contact Me": "Contact Me",
+  "Name": "Name",
+  "Email": "Email",
+  "Your Message": "Your Message",
+  "Send": "Send",
+
+  "Auto": "Auto",
+  "Light": "Light",
+  "Dark": "Dark",
+
+  "Show More": "Show More",
+
+
+  "My Projects":"My Projects"
 }

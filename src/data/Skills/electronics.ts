@@ -5,49 +5,34 @@ export const electronicsSkills: ImageInfo[] = [
   {
     image: logo.arduino,
     title: "Arduino",
-    description:
-      "An open-source microcontroller platform for prototyping and automation.",
   },
   {
     image: logo.esp,
     title: "ESP Modules",
-    description:
-      "Wi-Fi & Bluetooth-enabled microcontrollers like ESP32 and ESP8266 for IoT projects.",
   },
   {
     image: logo.raspberryPi,
     title: "Raspberry Pi",
-    description:
-      "A small yet powerful single-board computer for embedded systems and AI applications.",
   },
   {
     image: logo.sensor,
     title: "Sensors & Actuators",
-    description:
-      "Various input/output components used in automation and data collection.",
   },
   {
     image: logo.lora,
     title: "LoRa Technology",
-    description:
-      "Long-range wireless communication for IoT networks and smart cities.",
   },
   {
     image: logo.iot,
     title: "IoT Systems",
-    description:
-      "Developing connected devices that collect and transmit data for smart applications.",
   },
   {
     image: logo.robotics,
     title: "Robotics & Automation",
-    description:
-      "Building intelligent robotic systems with automation and AI integration.",
   },
   {
     image: logo.solarEnergy,
     title: "Solar Energy Systems",
-    description: "Designing and integrating solar-powered electronics for sustainable energy solutions.",
   },
 ]
 

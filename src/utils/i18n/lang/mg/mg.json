@@ -1,0 +1,247 @@
+{
+  "About": "Momba ahy",
+  "Educations": "Fianarana",
+  "Skills": "Fahaiza-manao",
+  "Projects": "Tetik'asa",
+  "Contact": "Fifandraisana",
+
+  "hello": "Manahoana, izaho ihany,",
+  "fullstack": "Ary Mpamorona <1>Full-Stack</1> aho",
+  "description": "Mpamorona Full-Stack mahay maro karazana aho, mahay amin'ny fampandrosoana ny lafiny front-end sy ny lafiny backend, mamorona rindranasa tsy misy tomika sy azo ampitomboina. Miaraka amin'ny fototra matanjaka amin'ny famoronana AI, mampiditra vahaolana manan-tsaina amin'ny tetik'asa aho. Ankoatra ny rindrambaiko, ny traikefako azo ampiharina amin'ny elektronika dia mampifandray ny elanelana misy eo amin'ny fitaovana sy ny rindrambaiko, ahafahana mamorona vahaolana marani-tsaina sy IoT. Amin'ny maha matihanina miteny maro, miara-miasa amin'ny ekipa samihafa aho. Andeha hifandray ary hamelona ny hevitra amin'ny teknolojia avo lenta!",
+
+  "downloadCV": "Sintomina ny CV",
+  "downloadLink": "https://marketplace.canva.com/EAF6AfG7q2I/2/0/1131w/canva-putih-dan-hitam-profesional-minimalis-cv-resume-template-K25EqSUcQWE.jpg",
+
+  "hobbiesSectionTitle": "Fialamboly sy Fahalianana",
+  "hobbies": {
+    "coding": {
+      "title": "Coding",
+      "description": "Tiako ny manangana tetik'asa, mianatra teknolojia vaovao, ary mamaha olana amin'ny alalan'ny kaody."
+    },
+    "music": {
+      "title": "Mozika",
+      "description": "Ny fihainoana sy ny fitendrena mozika dia mampitombo ny fahaiza-mamorona sy ny fifantohako."
+    },
+    "reading": {
+      "title": "Famakiana",
+      "description": "Tiako ny mamaky momba ny teknolojia, ny fanavaozana, ny siansa ary ny fampandrosoana ny tena manokana."
+    },
+    "sports": {
+      "title": "Fanatanjahantena",
+      "description": "Tiako ny milalao fanatanjahantena, indrindra ny baolina kitra sy ny basket ball."
+    },
+    "3Dmodeling": {
+      "title": "Fanamboarana 3D",
+      "description": "Tiako ny mamorona modely 3D sy mikaroka ny mety ho endrika."
+    },
+    "anime": {
+      "title": "Anime",
+      "description": "Tiako ny mijery andian-tsarimihetsika anime sy mamaky manga ho aingam-panahy."
+    },
+    "digitalCreation": {
+      "title": "Famoronana Digitaly",
+      "description": "Tiako ny mamorona zavakanto sy votoaty digitaly amin'ny fampiasana fitaovana isan-karazany."
+    },
+    "movies": {
+      "title": "Sarimihetsika",
+      "description": "Tiako ny mijery sarimihetsika amin'ny karazana sy kolontsaina samihafa."
+    },
+    "traveling": {
+      "title": "Fitsangatsanganana",
+      "description": "Mahafaly ahy ny mikaroka toerana vaovao sy miaina kolontsaina samihafa."
+    },
+    "gaming": {
+      "title": "gaming",
+      "description": "Tiako ny milalao lalao video sy milentika ao amin'ny tontolo virtoaly."
+    }
+  },
+
+  "educations": {
+    "title": "Fiaviana ara-pianarana",
+    "masterOfInformatics": {
+      "name": "Master amin'ny Siansa Informatika",
+      "cursus": "Database sy Injeniera Rindrambaiko",
+      "learned": [
+        "Fianarana mandroso momba ny injeniera rindrambaiko, ny famolavolana database, ary ny fanatsarana.",
+        "Fampandrosoana rindranasa rindrambaiko matanjaka sy azo ampitomboina.",
+        "Fikarohana momba ny maritrano rindrambaiko sy ny fomba fitantanana tetik'asa IT.",
+        "Famaranana tetik'asa fikarohana ampiharina amin'ny siansa informatika."
+      ]
+    },
+    "bachelorOfICT": {
+      "name": "Licence amin'ny ICT",
+      "cursus": "Elektronika/Teknolojia Momba ny Fampahalalam-baovao sy ny Fifandraisana",
+      "learned": [
+        "Nahazo fahaiza-manao amin'ny elektronika sy ny fifandraisan-davitra.",
+        "Nianatra rafitra tafiditra sy teknolojia digitaly.",
+        "Namita tetik'asa diplaoma mifantoka amin'ny fifandraisana misy eo amin'ny solosaina sy ny rafitra elektronika."
+      ]
+    },
+    "bachelorOfInformatics": {
+      "name": "Licence amin'ny Siansa Informatika",
+      "cursus": "Database sy Injeniera Rindrambaiko",
+      "learned": [
+        "Namolavola sy nitantana database relational sy NoSQL.",
+        "Nampivelatra rindrambaiko sy rindranasa web/finday.",
+        "Nampihatra fitsipika injeniera rindrambaiko sy algorithm fanatsarana.",
+        "Nampihatra fomba fiasa agile ho an'ny fitantanana tetik'asa."
+      ]
+    },
+    "baccalaureate": {
+      "name": "Bakalorea",
+      "cursus": "Serie D",
+      "learned": [
+        "Nahazo fiofanana ara-tsiansa mifantoka amin'ny matematika, fizika ary biolojia.",
+        "Nampivelatra ny fisainana analytical sy lojika ho an'ny famahana olana."
+      ]
+    }
+  },
+
+  "skills": {
+    "title": "Injeniera IT",
+    "description": "Manangana vahaolana web, finday ary AI azo ampitomboina aho, mampifangaro ny fampandrosoana full-stack, ny fianarana milina ary ny fahaiza-manao rafitra tafiditra."
+  },
+
+  "Informatics": "Informatika",
+  "Electronics": "Elektronika",
+  "Humans": "Olombelona",
+
+  "Programming Languages": "Fiteny fandaharana",
+  "Frameworks and Libraries": "Rafitra sy Tranomboky",
+  "RDBMS": "RDBMS",
+  "Others": "Hafa",
+
+  "Artificial Intelligence Skills": "Fahaiza-manao amin'ny Intelligence Artifisialy",
+  "aiSkills": {
+    "deepLearning": {
+      "translation": "Fianarana Lalina",
+      "description": "Tambajotra neural ho an'ny famantarana lamina sy ny fandraisana fanapahan-kevitra."
+    },
+    "NLP": {
+      "translation": "NLP",
+      "description": "Fanodinana sy fahatakarana ny fiteny olombelona."
+    },
+    "ML": {
+      "translation": "Fianarana Milina",
+      "description": "Modely fianarana voara-maso sy tsy voara-maso."
+    },
+    "computerVision": {
+      "translation": "Fahitan'ny Solosaina",
+      "description": "Fanodinana sary sy famantarana zavatra."
+    },
+    "dataProcessing": {
+      "translation": "Fanodinana angon-drakitra",
+      "description": "Fanadiovana sy fanovana angon-drakitra manta."
+    },
+    "modelTuning": {
+      "translation": "Fanitsiana Modely",
+      "description": "Fanatsarana ny modely AI ho an'ny fahombiazana tsara kokoa."
+    },
+    "aiResearch": {
+      "translation": "Fikarohana AI",
+      "description": "Fikarohana sy fampivoarana fomba fiasa AI vaovao."
+    }
+  },
+
+  "electronicSkills": {
+    "description": "Manana traikefa amin'ny fiasana amin'ny rafitra tafiditra sy ny teknolojia IoT aho, ao anatin'izany ny microcontrollers, sensors, protocol fifandraisana, ary automation.",
+
+    "Arduino": {
+      "translation": "Arduino",
+      "description": "Sehatra microcontroller open-source ho an'ny prototyping sy automation."
+    },
+    "ESP Modules": {
+      "translation": "ESP Modules",
+      "description": "Microcontrollers misy Wi-Fi & Bluetooth toy ny ESP32 sy ESP8266 ho an'ny tetik'asa IoT."
+    },
+    "Raspberry Pi": {
+      "translation": "Raspberry Pi",
+      "description": "Solosaina tokana kely nefa matanjaka ho an'ny rafitra tafiditra sy ny rindranasa AI."
+    },
+    "Sensors & Actuators": {
+      "translation": "Sensors & Actuators",
+      "description": "Fitaovana fampidirana/fivoahana isan-karazany ampiasaina amin'ny automation sy ny fanangonana angona."
+    },
+    "LoRa Technology": {
+      "translation": "Teknolojia LoRa",
+      "description": "Fifandraisana tsy misy tariby lavitra ho an'ny tambajotra IoT sy tanàna marani-tsaina."
+    },
+    "IoT Systems": {
+      "translation": "Rafitra IoT",
+      "description": "Fampandrosoana fitaovana mifandray ho an'ny rindranasa marani-tsaina."
+    },
+    "Robotics & Automation": {
+      "translation": "Robotics & Automation",
+      "description": "Fananganana rafitra robotika manan-tsaina miaraka amin'ny fampidirana AI."
+    },
+    "Solar Energy Systems": {
+      "translation": "Rafitra Angovo Avy Amin'ny Masoandro",
+      "description": "Famolavolana sy fampidirana elektronika mandeha amin'ny herin'ny masoandro ho an'ny vahaolana maharitra."
+    }
+  },
+
+  "Language Skills": "Fahaiza-miteny",
+  "Language Skills_description": {
+    "Malagasy": "Fiteny nibeazana miaraka amin'ny fahaiza-miteny sy manoratra feno.",
+    "French": "Mahay miteny, mamaky ary manoratra amin'ny fahaiza-manao matihanina.",
+    "English": "Fifehezana matanjaka ny teny anglisy ho an'ny fifandraisana matihanina sy akademika.",
+    "Indonesian": "Mahay ny teny Indoneziana ho an'ny fifandraisana am-bava sy an-tsoratra.",
+    "Malaysian": "Haavo fifampiresahana miaraka amin'ny fahatakarana tsara ny teny Malay am-bava."
+  },
+  "Malagasy": "Malagasy",
+  "French": "Frantsay",
+  "English": "Anglisy",
+  "Indonesian": "Indoneziana",
+  "Malaysian": "Maleziana",
+
+  "Collaboration and Leadership": "Fiarahamiasa sy Fitarihana",
+  "Collaboration and Leadership_description": {
+    "Team Collaboration": "Miasa amin'ny fomba mahomby amin'ny ekipa samihafa.",
+    "Public Speaking": "Matoky tena amin'ny fampisehoana sy ny fandraisana anjaran'ny mpanatrika.",
+    "Interpersonal Skills": "Mpiara-miasa sy mpilalao ekipa mahay mifandray.",
+    "Problem Solving": "Mitady vahaolana amin'ny toe-javatra sarotra."
+  },
+  "Team Collaboration": "Fiarahamiasa amin'ny ekipa",
+  "Public Speaking": "Fitenenana ampahibemaso",
+  "Interpersonal Skills": "Fahaiza-mifandray amin'ny hafa",
+  "Problem Solving": "Fahaiza-mamaha olana",
+
+  "Problem-Solving and Creativity": "Fahaiza-mamaha olana sy famoronana",
+  "Problem-Solving and Creativity_description": {
+    "Creativity": "Manavao ary mitady hevitra vaovao foana.",
+    "Critical Thinking": "Fisainana lojika matanjaka ho an'ny vahaolana mahomby.",
+    "Resilience": "Mahaiza-mampifanaraka tsara amin'ny fiovana sy ny fanamby."
+  },
+  "Creativity": "Famoronana",
+  "Critical Thinking": "Fisainana mitsikera",
+  "Resilience": "Faharetana",
+
+  "Professional Aptitudes": "Fahaiza-manao matihanina",
+  "Professional Aptitudes_description": {
+    "Analytical Thinking": "Fahaizana mandinika toe-javatra sarotra ary manome vahaolana mahomby.",
+    "Adaptability": "Mianatra haingana sy mampifanaraka amin'ny fanamby sy teknolojia vaovao.",
+    "Time Management": "Voalamina tsara, mahatratra ny fe-potoana ary mitantana tetik'asa maro amin'ny fomba mahomby.",
+    "Strong Work Ethic": "Manolo-tena sy manolo-tena hanatitra vokatra avo lenta.",
+    "Technical Expertise": "Fahatakarana matanjaka ny foto-kevitra ara-teknika sy ny fanatanterahana.",
+    "Project Management": "Mandamina sy mitarika tetik'asa amin'ny fomba mahomby."
+  },
+  "Analytical Thinking": "Fisainana analytical",
+  "Adaptability": "Fahaiza-mampifanaraka",
+  "Time Management": "Fitantanana ny fotoana",
+  "Strong Work Ethic": "Etika miasa matanjaka",
+  "Technical Expertise": "Fahaiza-manao ara-teknika",
+  "Project Management": "Fitantanana tetik'asa",
+
+  "Contact Me": "Mifandraisa amiko",
+  "Name": "Anarana",
+  "Email": "Mailaka",
+  "Your Message": "Ny hafatrao",
+  "Send": "Alefaso",
+
+  "Auto": "Auto",
+  "Light": "Mazava",
+  "Dark": "Maizina",
+
+  "Show More": "Bebe kokoa",
+  "My Projects": "Ny tetik'asako"
+}

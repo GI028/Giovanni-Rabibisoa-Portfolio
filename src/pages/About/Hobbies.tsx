@@ -5,77 +5,59 @@ import Button from "../../components/FormComponents/Button"
 import { motion } from "motion/react"
 import useRandomArray from "../../utils/hooks/useRandomArray"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 type Hobbie = {
-  name: string
-  description: string
+  key: string
   animation: object
 }
 
 const datas: Hobbie[] = [
   {
-    name: "Coding",
-    description:
-      "I love building projects, learning new technologies, and solving problems through code.",
+    key: "coding",
     animation: hobby.coding,
   },
   {
-    name: "Music",
-    description:
-      "Listening to and playing music helps boost my creativity and focus.",
+    key: "music",
     animation: hobby.music,
   },
   {
-    name: "Reading",
-    description:
-      "I love reading about technology, innovation, sciences and personal development.",
+    key: "reading",
     animation: hobby.reading,
   },
   {
-    name: "Sport",
-    description:
-      "I enjoy playing sports, especially football and basketball.        ",
+    key: "sports",
     animation: hobby.sport,
   },
   {
-    name: "3D Modeling",
-    description:
-      "I like creating 3D models and exploring design possibilities.       ",
+    key: "3Dmodeling",
     animation: hobby.modeling,
   },
   {
-    name: "Anime",
-    description:
-      "I enjoy watching anime series and reading manga for inspiration.   ",
+    key: "anime",
     animation: hobby.anime,
   },
   {
-    name: "Digital Creation",
-    description:
-      "I enjoy creating digital art and content using various tools.      ",
+    key: "digitalCreation",
     animation: hobby.digitalCreation,
   },
   {
-    name: "Movies",
-    description:
-      "I enjoy watching movies from different genres and cultures.        ",
+    key: "movies",
     animation: hobby.movie,
   },
   {
-    name: "Traveling",
-    description:
-      "I enjoy exploring new places and experiencing different cultures.  ",
+    key: "traveling",
     animation: hobby.traveling,
   },
   {
-    name: "Gaming",
-    description:
-      "I enjoy playing video games and immersing in virtual worlds.       ",
+    key: "gaming",
     animation: hobby.gaming,
   },
 ]
 
 export default function Hobbies() {
+  const { t } = useTranslation()
+
   const delays = useRandomArray(datas.length)
 
   const showInOnce = 4
@@ -92,7 +74,7 @@ export default function Hobbies() {
     <div className=" py-16">
       <h1 className="text-3xl font-bold text-text mb-16 flex items-center space-x-2">
         <MdInterests />
-        <span>Hobbies and Interests</span>
+        <span>{t('hobbiesSectionTitle')}</span>
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {datas.slice(0, showing).map((hobby, index) => (
@@ -107,8 +89,8 @@ export default function Hobbies() {
               contentClassName="space-y-3"
               className="w-full h-full"
             >
-              <h1 className="text-text text-lg">{hobby.name}</h1>
-              <p>{hobby.description}</p>
+              <h1 className="text-text text-lg">{t(`hobbies.${hobby.key}.title`)}</h1>
+              <p>{t(`hobbies.${hobby.key}.description`)}</p>
             </LottieCard>
           </motion.div>
         ))}
@@ -116,7 +98,7 @@ export default function Hobbies() {
       {canShowMore && (
         <div className="mt-16">
           <Button className="m-auto" onClick={handdleShowMore}>
-            Show More
+            {t('Show More')}
           </Button>
         </div>
       )}

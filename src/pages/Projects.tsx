@@ -6,8 +6,10 @@ import logo from "../assets/logo"
 import SquareImage from "../components/HTML/SquareImage"
 import Container from "../components/HTML/Container"
 import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation()
   return (
     <Container>
       <FullHeight
@@ -16,7 +18,7 @@ const Projects: React.FC = () => {
       >
         <div className="mt-4">
           <h1 className="text-2xl font-bold text-center mb-12 mt-4 xs:hidden">
-            My Projects
+            {t('My Projects')}
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
@@ -75,40 +77,5 @@ const Projects: React.FC = () => {
     </Container>
   )
 }
-// const Projects: React.FC = () => {
-//   return (
-//     <FullHeight skipNavbar className="bg-bg text-white py-16 px-4 sm:px-6 lg:px-8">
-//       <div className="mx-auto">
-//         <h1 className="text-4xl font-bold text-center mb-12">My Projects</h1>
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {projects.map((project, index) => (
-//             <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
-//               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-//               <div className="p-6">
-//                 <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-//                 <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
-//                 <div className="flex flex-wrap gap-2 mb-4">
-//                   {project.technologies.map((tech, techIndex) => (
-//                     <span key={techIndex} className="px-2 py-1 bg-gray-700 rounded-full text-sm">
-//                       {tech}
-//                     </span>
-//                   ))}
-//                 </div>
-//                 <a
-//                   href={project.url}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
-//                 >
-//                   View Project
-//                 </a>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </FullHeight>
-//   );
-// };
 
 export default Projects

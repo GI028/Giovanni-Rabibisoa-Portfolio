@@ -3,6 +3,7 @@ import { navData } from "./NavBar"
 import { NavLink } from "react-router"
 import { cn } from "../../utils/helpers"
 import { MouseEventHandler } from "react"
+import { useTranslation } from "react-i18next"
 
 type Props = {
   close: () => void // Function takes no arguments and returns void
@@ -63,6 +64,7 @@ const bgVariants = {
 }
 
 export default function SideNavigation({ close }: Props) {
+  const {t} = useTranslation()
     const closeNavigation:MouseEventHandler<HTMLDivElement> = (e)=>{
         if(e.currentTarget==e.target)
             close()
@@ -87,7 +89,7 @@ export default function SideNavigation({ close }: Props) {
                 )
               }
             >
-              {label}
+              {t(label)}
             </NavLink>
           </motion.li>
         ))}

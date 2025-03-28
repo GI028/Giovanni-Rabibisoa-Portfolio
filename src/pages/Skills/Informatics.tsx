@@ -16,16 +16,18 @@ import {
   scaleVariant,
 } from "../../animations/variants.ts"
 import useRandomArray from "../../utils/hooks/useRandomArray.ts"
+import { useTranslation } from "react-i18next"
 
 const imageSections: Section<ImageInfo>[] = [
   { title: "Programming Languages", data: data.programingLanguages },
   { title: "Frameworks and Libraries", data: data.frameworksAndLibraries },
-  { title: "SGBDR", data: data.databases },
+  { title: "RDBMS", data: data.databases },
 ]
 const others: Section<ImageInfo> = { title: "Others", data: data.softwares }
 const aiSection: Section<IconInfo> = {
   title: "Artificial Intelligence Skills",
   data: data.aiConcepts,
+  key:"aiSkills"
 }
 
 interface AnimatedImageInfoProps extends ImageInfo {
@@ -48,6 +50,7 @@ const ImageSkillItem: React.FC<AnimatedImageInfoProps> = ({
 )
 
 const Informatics: React.FC = () => {
+  const {t} = useTranslation()
   const imageSkillsDataLens = imageSections.reduce(
     (sum, section) => sum + section.data.length,
     0
@@ -72,7 +75,7 @@ const Informatics: React.FC = () => {
                 variants={fromRightVariant}
                 transition={{ duration: 0.3, delay: titleDelay * sectionIndex }}
               >
-                {title}
+                {t(title)}
               </motion.p>
             }
             data={data}
@@ -102,14 +105,16 @@ const Informatics: React.FC = () => {
               delay: titleDelay * (imageSections.length + 1),
             }}
           >
-            {aiSection.title}
+            {t(aiSection.title)}
           </motion.p>
         }
         data={aiSection.data}
         renderItem={(item, index) => (
           <AnimatedLabeledIcon
             key={index}
-            {...item}
+            title={t(`${aiSection.key}.${item.title}.translation`)}
+            description={t(`${aiSection.key}.${item.title}.description`)}
+            icon={item.icon}
             animation={{
               variants: fromBottomVariant,
               transition: {
@@ -129,7 +134,7 @@ const Informatics: React.FC = () => {
               delay: titleDelay * (imageSections.length + 2),
             }}
           >
-            {others.title}
+            {t(others.title)}
           </motion.p>
         }
         data={others.data}

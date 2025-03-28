@@ -16,6 +16,7 @@ import {
   scaleVariant,
 } from "../../animations/variants"
 import useRandomArray from "../../utils/hooks/useRandomArray"
+import { useTranslation } from "react-i18next"
 
 const iconSections: Section<IconInfo>[] = [
   { title: "Collaboration and Leadership", data: data.collaborationLeadership },
@@ -31,6 +32,8 @@ const languageSkills: Section<ImageInfo> = {
   data: data.languageSkills,
 }
 export default function Humans() {
+  const { t } = useTranslation()
+
   const iconSectionsDataLens = iconSections.reduce(
     (sum, section) => sum + section.data.length,
     0
@@ -49,7 +52,7 @@ export default function Humans() {
             variants={fromRightVariant}
             transition={{ duration: 0.3, delay: titleDelay * 0 }}
           >
-            {languageSkills.title}
+            {t(languageSkills.title)}
           </motion.p>
         }
         data={languageSkills.data}
@@ -58,7 +61,7 @@ export default function Humans() {
             key={index}
             tip={
               <p className="w-full inline-block max-w-30 text-text-3">
-                {item.description}
+                {t(`${languageSkills.title}_description.${item.title}`)}
               </p>
             }
           >
@@ -78,7 +81,7 @@ export default function Humans() {
                   />
                 }
               >
-                <p>{item.title}</p>
+                <p>{t(item.title)}</p>
               </Card>
             </motion.div>
           </Tooltip>
@@ -95,14 +98,16 @@ export default function Humans() {
                 variants={fromRightVariant}
                 transition={{ duration: 0.3, delay: titleDelay * (index + 1) }}
               >
-                {title}
+                {t(title)}
               </motion.p>
             }
             data={data}
             renderItem={(item, index) => (
               <AnimatedLabeledIcon
                 key={index}
-                {...item}
+                icon={item.icon}
+                title={t(item.title)}
+                description={t(`${title}_description.${item.title}`)}
                 animation={{
                   variants: scaleVariant,
                   transition: {

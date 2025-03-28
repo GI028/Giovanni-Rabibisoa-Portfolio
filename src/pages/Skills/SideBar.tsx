@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import FullHeight from "../../components/HTML/FullHeight"
 import SkipNavbar from "../../components/HTML/SikpNavbar"
 import { cn } from "../../utils/helpers"
@@ -13,6 +14,7 @@ export default function Sidebar({
   activeSection,
   scrollToSection,
 }: Props) {
+  const {t} = useTranslation()
   return (
     <>
       <FullHeight className="md:fixed md:top-0 w-full md:w-70 lg:w-80 xl:w-100 flex items-center">
@@ -20,16 +22,14 @@ export default function Sidebar({
           <div className="mb:pr-6 mb:pb-16">
             <header className="space-y-10 md:space-y-4 mb-5">
               <h2 className="text-text text-4xl font-bold">
-                Giovanni Rabibisoa
+                Rabibisoa Giovanni
               </h2>
-              <h3 className="text-text text-2xl">IT Engineer</h3>
+              <h3 className="text-text text-2xl">{t("skills.title")}</h3>
               <p>
-                I build scalable web, mobile, and AI-driven solutions, combining
-                full-stack development, machine learning, and embedded systems
-                expertise.
+                {t("skills.description")}
               </p>
             </header>
-            <h1 className="md:mb-4 text-2xl">Skills</h1>
+            <h1 className="md:mb-4 text-2xl">{t("Skills")}</h1>
             <ul>
               {sections.map((label) => (
                 <li key={label}>
@@ -41,7 +41,7 @@ export default function Sidebar({
                     )}
                   >
                     <span className="inline-block md:w-10 w-15 h-[2px] rounded-full bg-text md:bg-text-3 group-hover:bg-text group-hover:w-20 group-[.active]:bg-text group-[.active]:w-20 transition-all duration-200" />
-                    <span className="group-[.active]:text-text">{label}</span>
+                    <span className="group-[.active]:text-text">{t(label)}</span>
                   </button>
                 </li>
               ))}

@@ -1,8 +1,249 @@
 {
-    "Welcome to React": "Bienvenue chez React et react-i18next",
-    "userNumber_zero": "Aucun Utilisateur {{gio}}",  
-    "userNumber_one": "Nombre d'utilisateur: {{count}}",  
-    "userNumber": "Nombre d'utilisateurs: {{count}}",   
-    "welcomeUser": "Bienvenue <1>utilisateur</1>! <3>par default</3>",
-    "keyUnescaped": "Dangeureux {{-gio}}"
-}
+    "About": "À propos",
+    "Educations": "Éducation",
+    "Skills": "Compétences",
+    "Projects": "Projets",
+    "Contact": "Contact",
+  
+    "hello": "Bonjour, c'est moi,",
+    "fullstack": "Je suis un <1>développeur Full-Stack</1>",
+    "description": "Je suis un développeur Full-Stack polyvalent, maîtrisant à la fois le développement front-end et back-end, capable de créer des applications fluides et évolutives. Avec une solide base en IA, j'intègre des solutions intelligentes dans les projets. Au-delà du logiciel, mon expérience pratique en électronique comble le fossé entre le matériel et le logiciel, permettant des solutions intelligentes et IoT. En tant que professionnel multilingue, je collabore efficacement avec des équipes diverses. Connectons-nous et concrétisons des idées avec des technologies de pointe !",
+  
+    "downloadCV": "Télécharger le CV",
+    "downloadLink": "https://marketplace.canva.com/EAF6AfG7q2I/2/0/1131w/canva-putih-dan-hitam-profesional-minimalis-cv-resume-template-K25EqSUcQWE.jpg",
+  
+    "hobbiesSectionTitle": "Loisirs et centres d'intérêt",
+    "hobbies": {
+      "coding": {
+        "title": "Programmation",
+        "description": "J'aime créer des projets, apprendre de nouvelles technologies et résoudre des problèmes à travers le code."
+      },
+      "music": {
+        "title": "Musique",
+        "description": "Écouter et jouer de la musique stimule ma créativité et ma concentration."
+      },
+      "reading": {
+        "title": "Lecture",
+        "description": "J'adore lire des ouvrages sur la technologie, l'innovation, la science et le développement personnel."
+      },
+      "sports": {
+        "title": "Sports",
+        "description": "J'aime pratiquer des sports, notamment le football et le basket-ball."
+      },
+      "3Dmodeling": {
+        "title": "Modélisation 3D",
+        "description": "J'aime créer des modèles 3D et explorer les possibilités de conception."
+      },
+      "anime": {
+        "title": "Anime",
+        "description": "J'aime regarder des séries d'anime et lire des mangas pour m'inspirer."
+      },
+      "digitalCreation": {
+        "title": "Création numérique",
+        "description": "J'adore créer des œuvres numériques et du contenu à l'aide de divers outils."
+      },
+      "movies": {
+        "title": "Films",
+        "description": "J'aime regarder des films de différents genres et cultures."
+      },
+      "traveling": {
+        "title": "Voyages",
+        "description": "Explorer de nouveaux lieux et découvrir différentes cultures m'enthousiasme."
+      },
+      "gaming": {
+        "title": "Jeux vidéo",
+        "description": "J'adore jouer aux jeux vidéo et me plonger dans des mondes virtuels."
+      }
+    },
+  
+    "educations": {
+      "title": "Parcours éducatif",
+      "masterOfInformatics": {
+        "name": "Master en informatique",
+        "cursus": "Bases de données et génie logiciel",
+        "learned": [
+          "Approfondissement des concepts avancés en génie logiciel, conception et optimisation des bases de données.",
+          "Développement d’applications logicielles robustes et évolutives.",
+          "Étude des architectures logicielles et des méthodologies de gestion de projet IT.",
+          "Réalisation d’un projet de recherche appliqué en informatique"
+        ]
+      },
+      "bachelorOfICT": {
+        "name": "Licence en TIC",
+        "cursus": "Électronique/Technologies de l'information et de la communication",
+        "learned": [
+          "Acquisition d'une expertise en électronique et télécommunications.",
+          "Étude des systèmes embarqués et des technologies numériques.",
+          "Réalisation d'un projet de fin d'études axé sur l'interconnexion des systèmes informatiques et électroniques."
+        ]
+      },
+      "bachelorOfInformatics": {
+        "name": "Licence en informatique",
+        "cursus": "Bases de données et génie logiciel",
+        "learned": [
+          "Conception et gestion de bases de données relationnelles et NoSQL.",
+          "Développement de logiciels et d'applications web/mobiles.",
+          "Application des principes du génie logiciel et des algorithmes d'optimisation.",
+          "Mise en œuvre de méthodologies agiles pour la gestion de projets."
+        ]
+      },
+      "baccalaureate": {
+        "name": "Baccalauréat",
+        "cursus": "Série D",
+        "learned": [
+          "Formation scientifique avec un accent sur les mathématiques, la physique et la biologie.",
+          "Développement d'une pensée analytique et logique pour la résolution de problèmes."
+        ]
+      }
+    },
+  
+    "skills": {
+      "title": "Ingénieur en informatique",
+      "description": "Je crée des solutions web, mobiles et pilotées par l'IA, combinant le développement full-stack, l'apprentissage automatique et l'expertise en systèmes embarqués."
+    },
+  
+    "Informatics": "Informatique",
+    "Electronics": "Électronique",
+    "Humans": "Humains",
+  
+    "Programming Languages": "Langages de programmation",
+    "Frameworks and Libraries": "Frameworks et bibliothèques",
+    "RDBMS": "SGBDR",
+    "Others": "Autres",
+  
+    "Artificial Intelligence Skills": "Compétences en intelligence artificielle",
+    "aiSkills": {
+      "deepLearning": {
+        "translation": "Apprentissage profond",
+        "description": "Réseaux neuronaux pour la reconnaissance de motifs et la prise de décision."
+      },
+      "NLP": {
+        "translation": "NLP",
+        "description": "Traitement et compréhension du langage humain."
+      },
+      "ML": {
+        "translation": "Apprentissage automatique",
+        "description": "Modèles supervisés et non supervisés."
+      },
+      "computerVision": {
+        "translation": "Vision par ordinateur",
+        "description": "Traitement d'images et détection d'objets."
+      },
+      "dataProcessing": {
+        "translation": "Traitement des données",
+        "description": "Nettoyage et transformation des données brutes."
+      },
+      "modelTuning": {
+        "translation": "Optimisation des modèles",
+        "description": "Optimisation des modèles d'IA pour de meilleures performances."
+      },
+      "aiResearch": {
+        "translation": "Recherche en IA",
+        "description": "Exploration et développement de nouvelles méthodologies d'IA."
+      }
+    },
+  
+    "electronicSkills": {
+      "description": "J'ai de l'expérience dans le travail avec des systèmes embarqués et des technologies IoT, y compris des microcontrôleurs, des capteurs, des protocoles de communication et l'automatisation.",
+  
+      "Arduino": {
+        "translation": "Arduino",
+        "description": "Une plateforme de microcontrôleur open-source pour le prototypage et l'automatisation."
+      },
+      "ESP Modules": {
+        "translation": "Modules ESP",
+        "description": "Microcontrôleurs compatibles Wi-Fi et Bluetooth comme ESP32 et ESP8266 pour les projets IoT."
+      },
+      "Raspberry Pi": {
+        "translation": "Raspberry Pi",
+        "description": "Un petit mais puissant ordinateur monocarte pour les systèmes embarqués et les applications d'IA."
+      },
+      "Sensors & Actuators": {
+        "translation": "Capteurs et actionneurs",
+        "description": "Composants d'entrée/sortie utilisés dans l'automatisation et la collecte de données."
+      },
+      "LoRa Technology": {
+        "translation": "Technologie LoRa",
+        "description": "Communication sans fil longue portée pour les réseaux IoT et les villes intelligentes."
+      },
+      "IoT Systems": {
+        "translation": "Systèmes IoT",
+        "description": "Développement de dispositifs connectés pour des applications intelligentes."
+      },
+      "Robotics & Automation": {
+        "translation": "Robotique et automatisation",
+        "description": "Construction de systèmes robotiques intelligents avec intégration d'IA."
+      },
+      "Solar Energy Systems": {
+        "translation": "Systèmes solaires",
+        "description": "Conception et intégration d'électronique alimentée par l'énergie solaire pour des solutions durables."
+      }
+    },
+  
+    "Language Skills": "Compétences linguistiques",
+    "Language Skills_description": {
+      "Malagasy": "Langue maternelle avec une maîtrise totale de l'oral et de l'écrit.",
+      "French": "Fluide à l'oral, à l'écrit et à la lecture avec une compétence professionnelle.",
+      "English": "Maîtrise solide de l'anglais pour une communication professionnelle et académique.",
+      "Indonesian": "Compétent en indonésien pour une communication verbale et écrite.",
+      "Malaysian": "Niveau conversationnel avec une bonne compréhension du malais parlé."
+    },
+    "Malagasy": "Malgache",
+    "French": "Français",
+    "English": "Anglais",
+    "Indonesian": "Indonésien",
+    "Malaysian": "Malais",
+  
+    "Collaboration and Leadership": "Collaboration et leadership",
+    "Collaboration and Leadership_description": {
+      "Team Collaboration": "Travaille efficacement avec des équipes diverses.",
+      "Public Speaking": "Assurance lors des présentations et pour capter l'audience.",
+      "Interpersonal Skills": "Excellent communicateur et joueur d'équipe.",
+      "Problem Solving": "Trouve des solutions dans des scénarios complexes."
+    },
+    "Team Collaboration": "Collaboration en équipe",
+    "Public Speaking": "Prise de parole en public",
+    "Interpersonal Skills": "Compétences interpersonnelles",
+    "Problem Solving": "Résolution de problèmes",
+  
+    "Problem-Solving and Creativity": "Résolution de problèmes et créativité",
+    "Problem-Solving and Creativity_description": {
+      "Creativity": "Innovant et toujours à la recherche de nouvelles idées.",
+      "Critical Thinking": "Raisonnement logique solide pour des solutions efficaces.",
+      "Resilience": "S'adapte bien au changement et aux défis."
+    },
+    "Creativity": "Créativité",
+    "Critical Thinking": "Pensée critique",
+    "Resilience": "Résilience",
+  
+    "Professional Aptitudes": "Aptitudes professionnelles",
+    "Professional Aptitudes_description": {
+      "Analytical Thinking": "Capacité à analyser des situations complexes et à fournir des solutions efficaces.",
+      "Adaptability": "Rapide à apprendre et à s'adapter à de nouveaux défis et technologies.",
+      "Time Management": "Hautement organisé, respect des délais et gestion efficace de plusieurs projets.",
+      "Strong Work Ethic": "Dévoué et engagé à fournir des résultats de haute qualité.",
+      "Technical Expertise": "Solide maîtrise des concepts techniques et de leur exécution.",
+      "Project Management": "Organise et dirige des projets avec succès."
+    },
+    "Analytical Thinking": "Pensée analytique",
+    "Adaptability": "Adaptabilité",
+    "Time Management": "Gestion du temps",
+    "Strong Work Ethic": "Professionnalisme fort",
+    "Technical Expertise": "Expertise technique",
+    "Project Management": "Gestion de projets",
+  
+    "Contact Me": "Contactez-moi",
+    "Name": "Nom",
+    "Email": "E-mail",
+    "Your Message": "Votre message",
+    "Send": "Envoyer",
+  
+    "Auto": "Automatique",
+    "Light": "Clair",
+    "Dark": "Sombre",
+  
+    "Show More": "Afficher plus",
+
+
+    "My Projects":"Mes Projets"
+  }

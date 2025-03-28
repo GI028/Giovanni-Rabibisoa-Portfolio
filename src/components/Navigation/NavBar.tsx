@@ -10,6 +10,7 @@ import {
 import ToggleButton from "./ToggleButton"
 import { motion } from "motion/react"
 import SideNavigation from "./SideNavigation"
+import { useTranslation } from "react-i18next"
 
 type Props = {
   className?: string
@@ -33,6 +34,7 @@ const navData: NavigationData[] = [
 navData[0].target = "/"
 
 export default function NavBar({ className }: Props) {
+  const {t} = useTranslation()
   const { pathname } = useLocation()
   const [visible, setVisible] = useState(false)
 
@@ -73,7 +75,7 @@ export default function NavBar({ className }: Props) {
                   )
                 }
               >
-                {label}
+                {t(label)}
               </NavLink>
             </li>
           ))}

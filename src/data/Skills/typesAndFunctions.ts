@@ -39,6 +39,7 @@ export function imageIcon(
 export interface Section<T> { 
   title: string
   data: T[]
+  key?:string
 }
 
 export interface IconInfo extends BaseInfo {
